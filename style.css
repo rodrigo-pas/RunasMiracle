@@ -1,0 +1,147 @@
+body {
+    background-color: #1e1e1e;
+    color: white;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding-top: 50px; 
+}
+
+/* --- ESTILOS PARA O NOVO CABEÇALHO --- */
+.header-titulo {
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    
+    position: absolute; 
+    top: 50px; 
+    left: 50%;
+    transform: translateX(-50%); 
+
+    color: #d3d3d3; /* Cinza claro, como solicitado */
+    text-shadow: 0 0 5px #ff6; 
+}
+
+.titulo-analyser {
+    font-size: 2.5em; 
+    margin: 0 20px; 
+    white-space: nowrap; 
+}
+
+.emblema {
+    width: 60px; 
+    height: 60px;
+    filter: brightness(0.8); 
+}
+/* -------------------------------------- */
+
+
+.container {
+    text-align: center;
+    background-color: #2a2a2a;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px #000;
+    margin-top: 100px; 
+}
+
+/* NOVO: ESTILO PARA COLOCAR RUNA E VOCAÇÃO LADO A LADO */
+.selectors {
+    margin-bottom: 20px;
+    display: flex; 
+    justify-content: center;
+    gap: 30px; /* Espaço entre os dois dropdowns */
+}
+
+/* NOVO: ESTILO PARA COLOCAR LABEL ACIMA DO SELECT */
+.selector-group {
+    display: flex;
+    flex-direction: column; /* Coloca o label e o select um sobre o outro */
+    align-items: flex-start; /* Alinha o conteúdo à esquerda dentro do grupo */
+}
+
+select {
+    padding: 10px;
+    margin: 10px 0 0 0; /* Margem superior e zero nas laterais */
+    border-radius: 8px;
+    border: none;
+    background-color: #3a3a3a;
+    color: white;
+    font-size: 16px;
+    width: auto; 
+}
+
+select option {
+    background-color: #3a3a3a;
+    color: white;
+}
+
+label {
+    margin-top: 5px; 
+    font-weight: bold;
+    display: block; 
+}
+
+.runa-img {
+    width: 64px;
+    height: 64px;
+    margin-bottom: 15px;
+}
+
+.resultado p {
+    font-size: 18px;
+    margin: 8px 0;
+}
+
+/* Estilos da Área de Food */
+.food-area {
+    margin-top: 20px;
+    padding-top: 10px;
+    border-top: 1px solid #3a3a3a;
+}
+
+.food-result {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.food-img {
+    width: 32px;
+    height: 32px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.food-text {
+    font-size: 20px !important;
+    font-weight: bold;
+    margin: 0;
+}
+
+/* --- ESTILOS PARA O RODAPÉ --- */
+.rodape-bydrak {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    
+    background-color: #1e1e1e;
+    color: #888888;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 0.9em;
+    z-index: 100;
+}
+#foodBP_title {
+    font-size: 18px; 
+    margin-bottom: 5px; 
+    font-weight: bold;
+    /* Centraliza o texto */
+    text-align: center; 
+}

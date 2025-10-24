@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Runas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="header-titulo">
+        <img src="guild_image.png" alt="Emblema" class="emblema">
+        <h2 class="titulo-analyser">Inimigos do Analyser</h2>
+        <img src="guild_image.png" alt="Emblema" class="emblema">
+    </div>
+    
+    <div class="container">
+        <h1>Calculadora de Runas</h1>
+        
+        <div class="selectors">
+            
+            <div class="selector-group">
+                <label for="runa">Escolha a runa:</label>
+                <select id="runa" onchange="atualizarRuna()">
+                </select>
+            </div>
+
+            <div class="selector-group">
+                <label for="vocacao">Escolha a vocação:</label>
+                <select id="vocacao"></select>
+            </div>
+            
+        </div>
+
+        <div class="resultado">
+            <img id="runaImg" src="hmm.gif" alt="Runa" class="runa-img">
+            
+            <p id="tempoRuna">Tempo para 1 runa: --</p>
+            <p id="tempoBP">Tempo para 1 backpack: --</p>
+            
+            <div class="food-area">
+                <label for="food">Escolha a food:</label>
+                <select id="food" onchange="calcularTempo()">
+                </select>
+
+                <p id="foodBP_title" class="food-title">Foods necessárias para 1 BP:</p>
+                
+                <div class="food-result">
+                    <img id="foodImg" src="" alt="Food" class="food-img" style="display:none;">
+                    <p id="foodBP_quantity" class="food-text">--</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+    <footer class="rodape-bydrak">
+        Bydrak &reg;
+    </footer>
+    
+</body>
+</html>
