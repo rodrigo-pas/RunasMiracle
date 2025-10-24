@@ -1,0 +1,37 @@
+{
+    "timestamp": "2025-10-24 16:31:22",
+    "skill_name": "Fishing",
+    "value_type": "Skill",
+    "ranking": [
+        {
+            "rank_guild": 1,
+            "nome": "Tupi-guarani",
+            "valor": "39"
+        },
+        {
+            "rank_guild": 2,
+            "nome": "Citoplasma",
+            "valor": "34"
+        },
+        {
+            "rank_guild": 3,
+            "nome": "Skinp",
+            "valor": "34"
+        },
+        {
+            "rank_guild": 4,
+            "nome": "Thomas Turbando",
+            "valor": "32"
+        },
+        {
+            "rank_guild": 5,
+            "nome": "Coronel Tiburcio",
+            "valor": "31"
+        },
+        {
+            "rank_guild": 6,
+            "nome": "The Black Knight",
+            "valor": "31"
+        }
+    ]
+}

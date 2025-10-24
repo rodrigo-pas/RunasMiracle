@@ -1,0 +1,27 @@
+{
+    "timestamp": "2025-10-24 16:30:52",
+    "skill_name": "Magic Level",
+    "value_type": "Skill",
+    "ranking": [
+        {
+            "rank_guild": 1,
+            "nome": "Tupi-guarani",
+            "valor": "57"
+        },
+        {
+            "rank_guild": 2,
+            "nome": "Citoplasma",
+            "valor": "55"
+        },
+        {
+            "rank_guild": 3,
+            "nome": "Thomas Turbando",
+            "valor": "53"
+        },
+        {
+            "rank_guild": 4,
+            "nome": "Dalle",
+            "valor": "52"
+        }
+    ]
+}

@@ -1,0 +1,87 @@
+{
+    "timestamp": "2025-10-24 16:31:07",
+    "skill_name": "Shielding",
+    "value_type": "Skill",
+    "ranking": [
+        {
+            "rank_guild": 1,
+            "nome": "Potasu",
+            "valor": "89"
+        },
+        {
+            "rank_guild": 2,
+            "nome": "Umbabarauma Homemgol",
+            "valor": "83"
+        },
+        {
+            "rank_guild": 3,
+            "nome": "Bydrak",
+            "valor": "82"
+        },
+        {
+            "rank_guild": 4,
+            "nome": "The Black Knight",
+            "valor": "80"
+        },
+        {
+            "rank_guild": 5,
+            "nome": "Coronel Tiburcio",
+            "valor": "78"
+        },
+        {
+            "rank_guild": 6,
+            "nome": "Muxixe",
+            "valor": "78"
+        },
+        {
+            "rank_guild": 7,
+            "nome": "Sr Milagre",
+            "valor": "76"
+        },
+        {
+            "rank_guild": 8,
+            "nome": "Luis Espalha Lixo",
+            "valor": "75"
+        },
+        {
+            "rank_guild": 9,
+            "nome": "Holth",
+            "valor": "73"
+        },
+        {
+            "rank_guild": 10,
+            "nome": "Miu Miu",
+            "valor": "72"
+        },
+        {
+            "rank_guild": 11,
+            "nome": "Rejeitada",
+            "valor": "72"
+        },
+        {
+            "rank_guild": 12,
+            "nome": "Jesus Curitibano",
+            "valor": "70"
+        },
+        {
+            "rank_guild": 13,
+            "nome": "Sir Ignorance",
+            "valor": "68"
+        },
+        {
+            "rank_guild": 14,
+            "nome": "Lievore",
+            "valor": "68"
+        },
+        {
+            "rank_guild": 15,
+            "nome": "Panisset",
+            "valor": "67"
+        },
+        {
+            "rank_guild": 16,
+            "nome": "Marola Games",
+            "valor": "67"
+        }
+    ]
+}

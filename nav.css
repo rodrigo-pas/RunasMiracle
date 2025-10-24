@@ -1,0 +1,51 @@
+/* Estilos para o menu de navegação (nav.css) */
+.main-nav {
+    display: flex;
+    justify-content: center;
+    background-color: #333; /* Fundo escuro */
+    
+    /* --- CORREÇÃO DE POSICIONAMENTO PARA O TÍTULO ACIMA --- */
+    margin-top: 120px; /* Empurra o menu para baixo (ajuste se seu título for maior) */
+    position: relative;  
+    z-index: 1000;       /* Garante que o menu fique ACIMA de tudo */
+    /* --- FIM CORREÇÃO --- */
+
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    width: 800px; /* Largura padrão para centralizar */
+    max-width: 95%;
+}
+
+.main-nav a {
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+    border-right: 1px solid #444;
+    flex-grow: 1; /* Distribui o espaço igualmente */
+}
+
+.main-nav a:last-child {
+    border-right: none;
+}
+
+.main-nav a:hover {
+    background-color: #575757;
+    color: #ffd700;
+}
+
+.main-nav .nav-active {
+    background-color: #007bff;
+    color: white;
+}
+
+/* Centraliza o menu no corpo da página */
+body {
+    /* O body já deve ter display: flex e align-items: center para centralizar verticalmente. */
+    /* Vamos apenas garantir que o menu fique alinhado com o container */
+    align-items: center;
+    flex-direction: column;
+}

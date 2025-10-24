@@ -1,0 +1,67 @@
+{
+    "timestamp": "2025-10-24 16:29:50",
+    "skill_name": "Sword",
+    "value_type": "Skill",
+    "ranking": [
+        {
+            "rank_guild": 1,
+            "nome": "Potasu",
+            "valor": "89"
+        },
+        {
+            "rank_guild": 2,
+            "nome": "Umbabarauma Homemgol",
+            "valor": "86"
+        },
+        {
+            "rank_guild": 3,
+            "nome": "Sr Milagre",
+            "valor": "85"
+        },
+        {
+            "rank_guild": 4,
+            "nome": "Bydrak",
+            "valor": "84"
+        },
+        {
+            "rank_guild": 5,
+            "nome": "Rejeitada",
+            "valor": "81"
+        },
+        {
+            "rank_guild": 6,
+            "nome": "Luis Espalha Lixo",
+            "valor": "81"
+        },
+        {
+            "rank_guild": 7,
+            "nome": "Coronel Tiburcio",
+            "valor": "81"
+        },
+        {
+            "rank_guild": 8,
+            "nome": "Jesus Curitibano",
+            "valor": "73"
+        },
+        {
+            "rank_guild": 9,
+            "nome": "Sir Ignorance",
+            "valor": "71"
+        },
+        {
+            "rank_guild": 10,
+            "nome": "Panisset",
+            "valor": "69"
+        },
+        {
+            "rank_guild": 11,
+            "nome": "Kadmus",
+            "valor": "66"
+        },
+        {
+            "rank_guild": 12,
+            "nome": "Mercy",
+            "valor": "64"
+        }
+    ]
+}

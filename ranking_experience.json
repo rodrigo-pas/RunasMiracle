@@ -1,0 +1,67 @@
+{
+    "timestamp": "2025-10-24 16:29:34",
+    "skill_name": "Level / Exp",
+    "value_type": "Level",
+    "ranking": [
+        {
+            "rank_guild": 1,
+            "nome": "Sr Milagre",
+            "valor": "119"
+        },
+        {
+            "rank_guild": 2,
+            "nome": "Potasu",
+            "valor": "99"
+        },
+        {
+            "rank_guild": 3,
+            "nome": "Coronel Tiburcio",
+            "valor": "81"
+        },
+        {
+            "rank_guild": 4,
+            "nome": "Luis Espalha Lixo",
+            "valor": "79"
+        },
+        {
+            "rank_guild": 5,
+            "nome": "Rejeitada",
+            "valor": "67"
+        },
+        {
+            "rank_guild": 6,
+            "nome": "Holth",
+            "valor": "67"
+        },
+        {
+            "rank_guild": 7,
+            "nome": "Muxixe",
+            "valor": "65"
+        },
+        {
+            "rank_guild": 8,
+            "nome": "Lievore",
+            "valor": "62"
+        },
+        {
+            "rank_guild": 9,
+            "nome": "Suliwann",
+            "valor": "60"
+        },
+        {
+            "rank_guild": 10,
+            "nome": "Gravida De Taubate",
+            "valor": "59"
+        },
+        {
+            "rank_guild": 11,
+            "nome": "Thomas Turbando",
+            "valor": "59"
+        },
+        {
+            "rank_guild": 12,
+            "nome": "Brisolina",
+            "valor": "55"
+        }
+    ]
+}

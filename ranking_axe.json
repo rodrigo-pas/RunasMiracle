@@ -1,0 +1,32 @@
+{
+    "timestamp": "2025-10-24 16:30:06",
+    "skill_name": "Axe",
+    "value_type": "Skill",
+    "ranking": [
+        {
+            "rank_guild": 1,
+            "nome": "The Black Knight",
+            "valor": "85"
+        },
+        {
+            "rank_guild": 2,
+            "nome": "Muxixe",
+            "valor": "80"
+        },
+        {
+            "rank_guild": 3,
+            "nome": "Holth",
+            "valor": "78"
+        },
+        {
+            "rank_guild": 4,
+            "nome": "Miu Miu",
+            "valor": "73"
+        },
+        {
+            "rank_guild": 5,
+            "nome": "Marola Games",
+            "valor": "71"
+        }
+    ]
+}

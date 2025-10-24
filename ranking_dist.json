@@ -1,0 +1,52 @@
+{
+    "timestamp": "2025-10-24 16:30:37",
+    "skill_name": "Distance",
+    "value_type": "Skill",
+    "ranking": [
+        {
+            "rank_guild": 1,
+            "nome": "Lievore",
+            "valor": "88"
+        },
+        {
+            "rank_guild": 2,
+            "nome": "Gravida De Taubate",
+            "valor": "80"
+        },
+        {
+            "rank_guild": 3,
+            "nome": "Treep",
+            "valor": "79"
+        },
+        {
+            "rank_guild": 4,
+            "nome": "Sabhugo",
+            "valor": "79"
+        },
+        {
+            "rank_guild": 5,
+            "nome": "Suliwann",
+            "valor": "78"
+        },
+        {
+            "rank_guild": 6,
+            "nome": "Brisolina",
+            "valor": "77"
+        },
+        {
+            "rank_guild": 7,
+            "nome": "Asia Jack",
+            "valor": "71"
+        },
+        {
+            "rank_guild": 8,
+            "nome": "Rents Perecido",
+            "valor": "70"
+        },
+        {
+            "rank_guild": 9,
+            "nome": "Baros",
+            "valor": "68"
+        }
+    ]
+}
