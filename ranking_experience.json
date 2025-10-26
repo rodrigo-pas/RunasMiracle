@@ -1,5 +1,5 @@
 {
-    "timestamp": "2025-10-24 16:29:34",
+    "timestamp": "2025-10-26 09:29:21",
     "skill_name": "Level / Exp",
     "value_type": "Level",
     "ranking": [
@@ -11,32 +11,32 @@
         {
             "rank_guild": 2,
             "nome": "Potasu",
-            "valor": "99"
+            "valor": "100"
         },
         {
             "rank_guild": 3,
             "nome": "Coronel Tiburcio",
-            "valor": "81"
+            "valor": "82"
         },
         {
             "rank_guild": 4,
             "nome": "Luis Espalha Lixo",
-            "valor": "79"
+            "valor": "80"
         },
         {
             "rank_guild": 5,
-            "nome": "Rejeitada",
-            "valor": "67"
+            "nome": "Holth",
+            "valor": "69"
         },
         {
             "rank_guild": 6,
-            "nome": "Holth",
+            "nome": "Rejeitada",
             "valor": "67"
         },
         {
             "rank_guild": 7,
             "nome": "Muxixe",
-            "valor": "65"
+            "valor": "66"
         },
         {
             "rank_guild": 8,
@@ -61,7 +61,7 @@
         {
             "rank_guild": 12,
             "nome": "Brisolina",
-            "valor": "55"
+            "valor": "58"
         }
     ]
 }

@@ -1,5 +1,5 @@
 {
-    "timestamp": "2025-10-24 16:30:52",
+    "timestamp": "2025-10-26 09:30:53",
     "skill_name": "Magic Level",
     "value_type": "Skill",
     "ranking": [
@@ -22,6 +22,11 @@
             "rank_guild": 4,
             "nome": "Dalle",
             "valor": "52"
+        },
+        {
+            "rank_guild": 5,
+            "nome": "Sir Kustela",
+            "valor": "50"
         }
     ]
 }

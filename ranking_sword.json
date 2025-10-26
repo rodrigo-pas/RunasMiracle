@@ -1,5 +1,5 @@
 {
-    "timestamp": "2025-10-24 16:29:50",
+    "timestamp": "2025-10-26 09:29:39",
     "skill_name": "Sword",
     "value_type": "Skill",
     "ranking": [
@@ -11,7 +11,7 @@
         {
             "rank_guild": 2,
             "nome": "Umbabarauma Homemgol",
-            "valor": "86"
+            "valor": "87"
         },
         {
             "rank_guild": 3,
@@ -25,17 +25,17 @@
         },
         {
             "rank_guild": 5,
-            "nome": "Rejeitada",
+            "nome": "Coronel Tiburcio",
             "valor": "81"
         },
         {
             "rank_guild": 6,
-            "nome": "Luis Espalha Lixo",
+            "nome": "Rejeitada",
             "valor": "81"
         },
         {
             "rank_guild": 7,
-            "nome": "Coronel Tiburcio",
+            "nome": "Luis Espalha Lixo",
             "valor": "81"
         },
         {
