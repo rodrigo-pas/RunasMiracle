@@ -1,5 +1,5 @@
 {
-    "timestamp": "2025-10-26 09:31:11",
+    "timestamp": "2025-10-27 07:08:50",
     "skill_name": "Shielding",
     "value_type": "Skill",
     "ranking": [
@@ -50,12 +50,12 @@
         },
         {
             "rank_guild": 10,
-            "nome": "Rejeitada",
+            "nome": "Miu Miu",
             "valor": "72"
         },
         {
             "rank_guild": 11,
-            "nome": "Miu Miu",
+            "nome": "Rejeitada",
             "valor": "72"
         },
         {
@@ -70,12 +70,12 @@
         },
         {
             "rank_guild": 14,
-            "nome": "Marola Games",
-            "valor": "67"
+            "nome": "Panisset",
+            "valor": "68"
         },
         {
             "rank_guild": 15,
-            "nome": "Panisset",
+            "nome": "Marola Games",
             "valor": "67"
         },
         {
