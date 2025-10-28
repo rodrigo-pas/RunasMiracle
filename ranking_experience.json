@@ -1,5 +1,5 @@
 {
-    "timestamp": "2025-10-27 07:07:31",
+    "timestamp": "2025-10-28 07:29:22",
     "skill_name": "Level / Exp",
     "value_type": "Level",
     "ranking": [
@@ -16,7 +16,7 @@
         {
             "rank_guild": 3,
             "nome": "Coronel Tiburcio",
-            "valor": "83"
+            "valor": "84"
         },
         {
             "rank_guild": 4,
@@ -26,7 +26,7 @@
         {
             "rank_guild": 5,
             "nome": "Holth",
-            "valor": "70"
+            "valor": "71"
         },
         {
             "rank_guild": 6,
@@ -36,7 +36,7 @@
         {
             "rank_guild": 7,
             "nome": "Muxixe",
-            "valor": "66"
+            "valor": "67"
         },
         {
             "rank_guild": 8,
@@ -45,22 +45,22 @@
         },
         {
             "rank_guild": 9,
+            "nome": "Brisolina",
+            "valor": "61"
+        },
+        {
+            "rank_guild": 10,
             "nome": "Suliwann",
             "valor": "60"
         },
         {
-            "rank_guild": 10,
+            "rank_guild": 11,
             "nome": "Thomas Turbando",
             "valor": "59"
         },
         {
-            "rank_guild": 11,
-            "nome": "Gravida De Taubate",
-            "valor": "59"
-        },
-        {
             "rank_guild": 12,
-            "nome": "Brisolina",
+            "nome": "Gravida De Taubate",
             "valor": "59"
         }
     ]

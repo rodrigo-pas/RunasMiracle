@@ -1,5 +1,5 @@
 {
-    "timestamp": "2025-10-27 07:07:44",
+    "timestamp": "2025-10-28 07:29:35",
     "skill_name": "Sword",
     "value_type": "Skill",
     "ranking": [
@@ -25,12 +25,12 @@
         },
         {
             "rank_guild": 5,
-            "nome": "Coronel Tiburcio",
+            "nome": "Rejeitada",
             "valor": "81"
         },
         {
             "rank_guild": 6,
-            "nome": "Rejeitada",
+            "nome": "Coronel Tiburcio",
             "valor": "81"
         },
         {
@@ -45,13 +45,13 @@
         },
         {
             "rank_guild": 9,
-            "nome": "Sir Ignorance",
+            "nome": "Panisset",
             "valor": "71"
         },
         {
             "rank_guild": 10,
-            "nome": "Panisset",
-            "valor": "70"
+            "nome": "Sir Ignorance",
+            "valor": "71"
         },
         {
             "rank_guild": 11,

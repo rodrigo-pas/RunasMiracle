@@ -17,7 +17,6 @@ SKILLS = {
     'maglevel': 'Magic Level',
     'shielding': 'Shielding',
     'fishing': 'Fishing',
-    # 'fist' foi removido para economizar requests
 }
 
 # ===============================================
@@ -27,7 +26,7 @@ SKILLS = {
 class GuildAnalyzerApp:
     
     # --- CONSTANTE DE CLASSE ---
-    MAX_PAGES = 10 # Busca nas primeiras 10 páginas do ranking (Top 1000)
+    MAX_PAGES = 10 # Busca nas 10 páginas do ranking (Top 1000)
     
     def __init__(self, root):
         self.root = root

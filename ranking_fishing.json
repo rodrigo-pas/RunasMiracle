@@ -1,5 +1,5 @@
 {
-    "timestamp": "2025-10-27 07:09:03",
+    "timestamp": "2025-10-28 07:30:55",
     "skill_name": "Fishing",
     "value_type": "Skill",
     "ranking": [
@@ -21,17 +21,22 @@
         {
             "rank_guild": 4,
             "nome": "Thomas Turbando",
-            "valor": "32"
+            "valor": "33"
         },
         {
             "rank_guild": 5,
-            "nome": "The Black Knight",
+            "nome": "Coronel Tiburcio",
             "valor": "31"
         },
         {
             "rank_guild": 6,
-            "nome": "Coronel Tiburcio",
+            "nome": "The Black Knight",
             "valor": "31"
+        },
+        {
+            "rank_guild": 7,
+            "nome": "Panisset",
+            "valor": "30"
         }
     ]
 }

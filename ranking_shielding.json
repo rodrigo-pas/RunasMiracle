@@ -1,5 +1,5 @@
 {
-    "timestamp": "2025-10-27 07:08:50",
+    "timestamp": "2025-10-28 07:30:41",
     "skill_name": "Shielding",
     "value_type": "Skill",
     "ranking": [
@@ -16,7 +16,7 @@
         {
             "rank_guild": 3,
             "nome": "Bydrak",
-            "valor": "82"
+            "valor": "83"
         },
         {
             "rank_guild": 4,
@@ -50,12 +50,12 @@
         },
         {
             "rank_guild": 10,
-            "nome": "Miu Miu",
+            "nome": "Rejeitada",
             "valor": "72"
         },
         {
             "rank_guild": 11,
-            "nome": "Rejeitada",
+            "nome": "Miu Miu",
             "valor": "72"
         },
         {
@@ -65,22 +65,22 @@
         },
         {
             "rank_guild": 13,
+            "nome": "Panisset",
+            "valor": "69"
+        },
+        {
+            "rank_guild": 14,
             "nome": "Lievore",
             "valor": "68"
         },
         {
-            "rank_guild": 14,
-            "nome": "Panisset",
-            "valor": "68"
-        },
-        {
             "rank_guild": 15,
-            "nome": "Marola Games",
+            "nome": "Sir Ignorance",
             "valor": "67"
         },
         {
             "rank_guild": 16,
-            "nome": "Sir Ignorance",
+            "nome": "Marola Games",
             "valor": "67"
         }
     ]
