@@ -1,5 +1,5 @@
 {
-    "timestamp": "2025-10-28 07:30:41",
+    "timestamp": "2025-10-30 15:48:58",
     "skill_name": "Shielding",
     "value_type": "Skill",
     "ranking": [
@@ -11,75 +11,70 @@
         {
             "rank_guild": 2,
             "nome": "Umbabarauma Homemgol",
-            "valor": "84"
+            "valor": "85"
         },
         {
             "rank_guild": 3,
-            "nome": "Bydrak",
-            "valor": "83"
-        },
-        {
-            "rank_guild": 4,
             "nome": "The Black Knight",
             "valor": "80"
         },
         {
-            "rank_guild": 5,
+            "rank_guild": 4,
             "nome": "Coronel Tiburcio",
-            "valor": "78"
+            "valor": "79"
         },
         {
-            "rank_guild": 6,
+            "rank_guild": 5,
             "nome": "Muxixe",
             "valor": "78"
         },
         {
-            "rank_guild": 7,
+            "rank_guild": 6,
             "nome": "Sr Milagre",
             "valor": "76"
         },
         {
-            "rank_guild": 8,
+            "rank_guild": 7,
             "nome": "Luis Espalha Lixo",
             "valor": "75"
         },
         {
-            "rank_guild": 9,
+            "rank_guild": 8,
             "nome": "Holth",
-            "valor": "73"
+            "valor": "74"
         },
         {
-            "rank_guild": 10,
+            "rank_guild": 9,
             "nome": "Rejeitada",
             "valor": "72"
         },
         {
-            "rank_guild": 11,
+            "rank_guild": 10,
             "nome": "Miu Miu",
             "valor": "72"
         },
         {
-            "rank_guild": 12,
+            "rank_guild": 11,
             "nome": "Jesus Curitibano",
             "valor": "70"
         },
         {
-            "rank_guild": 13,
+            "rank_guild": 12,
             "nome": "Panisset",
-            "valor": "69"
+            "valor": "70"
         },
         {
-            "rank_guild": 14,
+            "rank_guild": 13,
             "nome": "Lievore",
             "valor": "68"
         },
         {
-            "rank_guild": 15,
+            "rank_guild": 14,
             "nome": "Sir Ignorance",
-            "valor": "67"
+            "valor": "68"
         },
         {
-            "rank_guild": 16,
+            "rank_guild": 15,
             "nome": "Marola Games",
             "valor": "67"
         }

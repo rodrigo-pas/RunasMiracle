@@ -1,5 +1,5 @@
 {
-    "timestamp": "2025-10-28 07:30:28",
+    "timestamp": "2025-10-30 15:48:45",
     "skill_name": "Magic Level",
     "value_type": "Skill",
     "ranking": [
@@ -11,7 +11,7 @@
         {
             "rank_guild": 2,
             "nome": "Citoplasma",
-            "valor": "55"
+            "valor": "56"
         },
         {
             "rank_guild": 3,
@@ -21,7 +21,12 @@
         {
             "rank_guild": 4,
             "nome": "Dalle",
-            "valor": "52"
+            "valor": "53"
+        },
+        {
+            "rank_guild": 5,
+            "nome": "Sir Kustela",
+            "valor": "51"
         }
     ]
 }

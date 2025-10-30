@@ -1,5 +1,5 @@
 {
-    "timestamp": "2025-10-28 07:29:35",
+    "timestamp": "2025-10-30 15:47:53",
     "skill_name": "Sword",
     "value_type": "Skill",
     "ranking": [
@@ -11,55 +11,50 @@
         {
             "rank_guild": 2,
             "nome": "Umbabarauma Homemgol",
-            "valor": "87"
+            "valor": "88"
         },
         {
             "rank_guild": 3,
-            "nome": "Bydrak",
-            "valor": "85"
-        },
-        {
-            "rank_guild": 4,
             "nome": "Sr Milagre",
             "valor": "85"
         },
         {
-            "rank_guild": 5,
-            "nome": "Rejeitada",
-            "valor": "81"
-        },
-        {
-            "rank_guild": 6,
-            "nome": "Coronel Tiburcio",
-            "valor": "81"
-        },
-        {
-            "rank_guild": 7,
+            "rank_guild": 4,
             "nome": "Luis Espalha Lixo",
             "valor": "81"
         },
         {
-            "rank_guild": 8,
+            "rank_guild": 5,
+            "nome": "Coronel Tiburcio",
+            "valor": "81"
+        },
+        {
+            "rank_guild": 6,
+            "nome": "Rejeitada",
+            "valor": "81"
+        },
+        {
+            "rank_guild": 7,
             "nome": "Jesus Curitibano",
             "valor": "73"
         },
         {
-            "rank_guild": 9,
+            "rank_guild": 8,
             "nome": "Panisset",
-            "valor": "71"
+            "valor": "72"
         },
         {
-            "rank_guild": 10,
+            "rank_guild": 9,
             "nome": "Sir Ignorance",
             "valor": "71"
         },
         {
-            "rank_guild": 11,
+            "rank_guild": 10,
             "nome": "Kadmus",
             "valor": "66"
         },
         {
-            "rank_guild": 12,
+            "rank_guild": 11,
             "nome": "Mercy",
             "valor": "64"
         }

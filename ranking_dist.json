@@ -1,5 +1,5 @@
 {
-    "timestamp": "2025-10-28 07:30:14",
+    "timestamp": "2025-10-30 15:48:33",
     "skill_name": "Distance",
     "value_type": "Skill",
     "ranking": [
@@ -11,7 +11,7 @@
         {
             "rank_guild": 2,
             "nome": "Treep",
-            "valor": "80"
+            "valor": "81"
         },
         {
             "rank_guild": 3,
@@ -30,8 +30,8 @@
         },
         {
             "rank_guild": 6,
-            "nome": "Suliwann",
-            "valor": "78"
+            "nome": "Baros",
+            "valor": "74"
         },
         {
             "rank_guild": 7,
@@ -40,11 +40,6 @@
         },
         {
             "rank_guild": 8,
-            "nome": "Baros",
-            "valor": "71"
-        },
-        {
-            "rank_guild": 9,
             "nome": "Rents Perecido",
             "valor": "71"
         }
