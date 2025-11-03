@@ -67,7 +67,21 @@ function displayRanking(data) {
     const updateTimeElement = document.getElementById('last-update');
     
     titleElement.textContent = `TOP ${data.value_type} - ${data.skill_name}`;
-    updateTimeElement.textContent = `Última atualização: ${data.timestamp}`;
+    
+    // --- CORREÇÃO DA DATA PARA O PADRÃO BRASILEIRO ---
+    const timestamp = data.timestamp; // Ex: "2025-11-03 12:00:00"
+    
+    // Divide o timestamp em Data e Hora
+    const [datePart, timePart] = timestamp.split(' ');
+    
+    // Reverte a ordem da data de YYYY-MM-DD para DD/MM/YYYY
+    const formattedDate = datePart.split('-').reverse().join('/'); 
+    
+    // Junta a nova data com a hora
+    const formattedTimestamp = `${formattedDate} ${timePart}`; 
+
+    updateTimeElement.textContent = `Última atualização: ${formattedTimestamp}`;
+    // --- FIM DA CORREÇÃO DA DATA ---
     
     if (data.ranking.length === 0) {
         resultsDiv.innerHTML = `<p>Nenhum membro da guilda encontrado no ranking global de ${data.skill_name}.</p>`;
