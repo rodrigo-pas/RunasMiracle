@@ -1,5 +1,5 @@
 {
-    "timestamp": "2025-10-30 15:48:06",
+    "timestamp": "2025-11-03 09:42:07",
     "skill_name": "Axe",
     "value_type": "Skill",
     "ranking": [
@@ -16,7 +16,7 @@
         {
             "rank_guild": 3,
             "nome": "Holth",
-            "valor": "79"
+            "valor": "80"
         },
         {
             "rank_guild": 4,
@@ -27,6 +27,11 @@
             "rank_guild": 5,
             "nome": "Marola Games",
             "valor": "71"
+        },
+        {
+            "rank_guild": 6,
+            "nome": "Paul Atreidess",
+            "valor": "67"
         }
     ]
 }

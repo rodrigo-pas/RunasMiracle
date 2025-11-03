@@ -1,5 +1,5 @@
 {
-    "timestamp": "2025-10-30 15:48:58",
+    "timestamp": "2025-11-03 09:42:59",
     "skill_name": "Shielding",
     "value_type": "Skill",
     "ranking": [
@@ -26,7 +26,7 @@
         {
             "rank_guild": 5,
             "nome": "Muxixe",
-            "valor": "78"
+            "valor": "79"
         },
         {
             "rank_guild": 6,
@@ -41,40 +41,45 @@
         {
             "rank_guild": 8,
             "nome": "Holth",
-            "valor": "74"
+            "valor": "75"
         },
         {
             "rank_guild": 9,
+            "nome": "Miu Miu",
+            "valor": "73"
+        },
+        {
+            "rank_guild": 10,
             "nome": "Rejeitada",
             "valor": "72"
         },
         {
-            "rank_guild": 10,
-            "nome": "Miu Miu",
-            "valor": "72"
+            "rank_guild": 11,
+            "nome": "Panisset",
+            "valor": "71"
         },
         {
-            "rank_guild": 11,
+            "rank_guild": 12,
+            "nome": "Caco De Vidro",
+            "valor": "71"
+        },
+        {
+            "rank_guild": 13,
             "nome": "Jesus Curitibano",
             "valor": "70"
         },
         {
-            "rank_guild": 12,
-            "nome": "Panisset",
+            "rank_guild": 14,
+            "nome": "Lievore",
             "valor": "70"
         },
         {
-            "rank_guild": 13,
-            "nome": "Lievore",
-            "valor": "68"
-        },
-        {
-            "rank_guild": 14,
-            "nome": "Sir Ignorance",
-            "valor": "68"
-        },
-        {
             "rank_guild": 15,
+            "nome": "Paul Atreidess",
+            "valor": "68"
+        },
+        {
+            "rank_guild": 16,
             "nome": "Marola Games",
             "valor": "67"
         }

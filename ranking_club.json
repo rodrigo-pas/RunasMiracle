@@ -1,5 +1,5 @@
 {
-    "timestamp": "2025-10-30 15:48:20",
+    "timestamp": "2025-11-03 09:42:20",
     "skill_name": "Club",
     "value_type": "Skill",
     "ranking": [
@@ -7,6 +7,11 @@
             "rank_guild": 1,
             "nome": "Potasu",
             "valor": "87"
+        },
+        {
+            "rank_guild": 2,
+            "nome": "Paul Atreidess",
+            "valor": "78"
         }
     ]
 }

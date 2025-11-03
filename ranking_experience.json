@@ -1,5 +1,5 @@
 {
-    "timestamp": "2025-10-30 15:47:40",
+    "timestamp": "2025-11-03 09:41:40",
     "skill_name": "Level / Exp",
     "value_type": "Level",
     "ranking": [
@@ -15,46 +15,51 @@
         },
         {
             "rank_guild": 3,
-            "nome": "Coronel Tiburcio",
-            "valor": "85"
+            "nome": "Paul Atreidess",
+            "valor": "94"
         },
         {
             "rank_guild": 4,
-            "nome": "Luis Espalha Lixo",
-            "valor": "80"
+            "nome": "Coronel Tiburcio",
+            "valor": "86"
         },
         {
             "rank_guild": 5,
-            "nome": "Holth",
-            "valor": "73"
+            "nome": "Luis Espalha Lixo",
+            "valor": "81"
         },
         {
             "rank_guild": 6,
-            "nome": "Rejeitada",
-            "valor": "67"
+            "nome": "Holth",
+            "valor": "75"
         },
         {
             "rank_guild": 7,
             "nome": "Muxixe",
-            "valor": "67"
+            "valor": "68"
         },
         {
             "rank_guild": 8,
-            "nome": "Lievore",
-            "valor": "62"
+            "nome": "Rejeitada",
+            "valor": "67"
         },
         {
             "rank_guild": 9,
             "nome": "Brisolina",
-            "valor": "62"
+            "valor": "66"
         },
         {
             "rank_guild": 10,
-            "nome": "Thomas Turbando",
-            "valor": "59"
+            "nome": "Lievore",
+            "valor": "62"
         },
         {
             "rank_guild": 11,
+            "nome": "Thomas Turbando",
+            "valor": "60"
+        },
+        {
+            "rank_guild": 12,
             "nome": "Gravida De Taubate",
             "valor": "59"
         }

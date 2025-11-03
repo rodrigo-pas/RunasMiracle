@@ -1,12 +1,12 @@
 {
-    "timestamp": "2025-10-30 15:48:45",
+    "timestamp": "2025-11-03 09:42:46",
     "skill_name": "Magic Level",
     "value_type": "Skill",
     "ranking": [
         {
             "rank_guild": 1,
             "nome": "Tupi-guarani",
-            "valor": "57"
+            "valor": "58"
         },
         {
             "rank_guild": 2,
@@ -16,7 +16,7 @@
         {
             "rank_guild": 3,
             "nome": "Thomas Turbando",
-            "valor": "53"
+            "valor": "54"
         },
         {
             "rank_guild": 4,
@@ -26,7 +26,7 @@
         {
             "rank_guild": 5,
             "nome": "Sir Kustela",
-            "valor": "51"
+            "valor": "52"
         }
     ]
 }

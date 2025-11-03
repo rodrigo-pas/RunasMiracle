@@ -1,17 +1,17 @@
 {
-    "timestamp": "2025-10-30 15:48:33",
+    "timestamp": "2025-11-03 09:42:33",
     "skill_name": "Distance",
     "value_type": "Skill",
     "ranking": [
         {
             "rank_guild": 1,
             "nome": "Lievore",
-            "valor": "88"
+            "valor": "89"
         },
         {
             "rank_guild": 2,
-            "nome": "Treep",
-            "valor": "81"
+            "nome": "Brisolina",
+            "valor": "82"
         },
         {
             "rank_guild": 3,
@@ -20,7 +20,7 @@
         },
         {
             "rank_guild": 4,
-            "nome": "Brisolina",
+            "nome": "Treep",
             "valor": "80"
         },
         {
@@ -31,7 +31,7 @@
         {
             "rank_guild": 6,
             "nome": "Baros",
-            "valor": "74"
+            "valor": "75"
         },
         {
             "rank_guild": 7,

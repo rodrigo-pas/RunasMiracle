@@ -1,5 +1,5 @@
 {
-    "timestamp": "2025-10-30 15:47:53",
+    "timestamp": "2025-11-03 09:41:53",
     "skill_name": "Sword",
     "value_type": "Skill",
     "ranking": [
@@ -35,26 +35,31 @@
         },
         {
             "rank_guild": 7,
+            "nome": "Caco De Vidro",
+            "valor": "74"
+        },
+        {
+            "rank_guild": 8,
             "nome": "Jesus Curitibano",
             "valor": "73"
         },
         {
-            "rank_guild": 8,
-            "nome": "Panisset",
-            "valor": "72"
-        },
-        {
             "rank_guild": 9,
-            "nome": "Sir Ignorance",
-            "valor": "71"
+            "nome": "Panisset",
+            "valor": "73"
         },
         {
             "rank_guild": 10,
+            "nome": "Sir Ignorance",
+            "valor": "70"
+        },
+        {
+            "rank_guild": 11,
             "nome": "Kadmus",
             "valor": "66"
         },
         {
-            "rank_guild": 11,
+            "rank_guild": 12,
             "nome": "Mercy",
             "valor": "64"
         }
