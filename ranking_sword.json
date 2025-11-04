@@ -1,5 +1,5 @@
 {
-    "timestamp": "2025-11-03 09:58:31",
+    "timestamp": "2025-11-04 10:44:39",
     "skill_name": "Sword",
     "value_type": "Skill",
     "ranking": [
@@ -20,23 +20,23 @@
         },
         {
             "rank_guild": 4,
-            "nome": "Luis Espalha Lixo",
-            "valor": "81"
+            "nome": "Coronel Tiburcio",
+            "valor": "82"
         },
         {
             "rank_guild": 5,
-            "nome": "Coronel Tiburcio",
+            "nome": "Luis Espalha Lixo",
             "valor": "81"
         },
         {
             "rank_guild": 6,
             "nome": "Rejeitada",
-            "valor": "81"
+            "valor": "80"
         },
         {
             "rank_guild": 7,
             "nome": "Caco De Vidro",
-            "valor": "74"
+            "valor": "75"
         },
         {
             "rank_guild": 8,

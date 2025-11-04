@@ -1,5 +1,5 @@
 {
-    "timestamp": "2025-11-03 09:59:39",
+    "timestamp": "2025-11-04 10:45:51",
     "skill_name": "Shielding",
     "value_type": "Skill",
     "ranking": [
@@ -30,28 +30,28 @@
         },
         {
             "rank_guild": 6,
-            "nome": "Sr Milagre",
+            "nome": "Drady Legend",
             "valor": "76"
         },
         {
             "rank_guild": 7,
+            "nome": "Sr Milagre",
+            "valor": "76"
+        },
+        {
+            "rank_guild": 8,
             "nome": "Luis Espalha Lixo",
             "valor": "75"
         },
         {
-            "rank_guild": 8,
+            "rank_guild": 9,
             "nome": "Holth",
             "valor": "75"
         },
         {
-            "rank_guild": 9,
+            "rank_guild": 10,
             "nome": "Miu Miu",
             "valor": "73"
-        },
-        {
-            "rank_guild": 10,
-            "nome": "Rejeitada",
-            "valor": "72"
         },
         {
             "rank_guild": 11,
@@ -65,8 +65,8 @@
         },
         {
             "rank_guild": 13,
-            "nome": "Jesus Curitibano",
-            "valor": "70"
+            "nome": "Rejeitada",
+            "valor": "71"
         },
         {
             "rank_guild": 14,
@@ -75,11 +75,16 @@
         },
         {
             "rank_guild": 15,
+            "nome": "Jesus Curitibano",
+            "valor": "70"
+        },
+        {
+            "rank_guild": 16,
             "nome": "Paul Atreidess",
             "valor": "68"
         },
         {
-            "rank_guild": 16,
+            "rank_guild": 17,
             "nome": "Marola Games",
             "valor": "67"
         }

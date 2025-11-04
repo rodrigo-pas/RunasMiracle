@@ -1,5 +1,5 @@
 {
-    "timestamp": "2025-11-03 09:59:53",
+    "timestamp": "2025-11-04 10:46:05",
     "skill_name": "Fishing",
     "value_type": "Skill",
     "ranking": [
@@ -20,8 +20,8 @@
         },
         {
             "rank_guild": 4,
-            "nome": "Coronel Tiburcio",
-            "valor": "31"
+            "nome": "Panisset",
+            "valor": "32"
         },
         {
             "rank_guild": 5,
@@ -30,7 +30,7 @@
         },
         {
             "rank_guild": 6,
-            "nome": "Panisset",
+            "nome": "Coronel Tiburcio",
             "valor": "31"
         }
     ]
