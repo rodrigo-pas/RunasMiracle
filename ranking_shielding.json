@@ -1,5 +1,5 @@
 {
-    "timestamp": "2025-11-04 10:56:37",
+    "timestamp": "2025-11-04 11:58:46",
     "skill_name": "Shielding",
     "value_type": "Skill",
     "ranking": [
@@ -30,12 +30,12 @@
         },
         {
             "rank_guild": 6,
-            "nome": "Drady Legend",
+            "nome": "Sr Milagre",
             "valor": "76"
         },
         {
             "rank_guild": 7,
-            "nome": "Sr Milagre",
+            "nome": "Drady Legend",
             "valor": "76"
         },
         {
@@ -55,17 +55,17 @@
         },
         {
             "rank_guild": 11,
-            "nome": "Panisset",
+            "nome": "Rejeitada",
             "valor": "71"
         },
         {
             "rank_guild": 12,
-            "nome": "Caco De Vidro",
+            "nome": "Panisset",
             "valor": "71"
         },
         {
             "rank_guild": 13,
-            "nome": "Rejeitada",
+            "nome": "Caco De Vidro",
             "valor": "71"
         },
         {
