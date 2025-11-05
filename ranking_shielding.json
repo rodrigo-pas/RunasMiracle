@@ -1,5 +1,5 @@
 {
-    "timestamp": "2025-11-04 11:58:46",
+    "timestamp": "2025-11-05 09:39:41",
     "skill_name": "Shielding",
     "value_type": "Skill",
     "ranking": [
@@ -11,7 +11,7 @@
         {
             "rank_guild": 2,
             "nome": "Umbabarauma Homemgol",
-            "valor": "85"
+            "valor": "86"
         },
         {
             "rank_guild": 3,
@@ -55,12 +55,12 @@
         },
         {
             "rank_guild": 11,
-            "nome": "Rejeitada",
-            "valor": "71"
+            "nome": "Panisset",
+            "valor": "72"
         },
         {
             "rank_guild": 12,
-            "nome": "Panisset",
+            "nome": "Rejeitada",
             "valor": "71"
         },
         {
@@ -70,12 +70,12 @@
         },
         {
             "rank_guild": 14,
-            "nome": "Lievore",
+            "nome": "Jesus Curitibano",
             "valor": "70"
         },
         {
             "rank_guild": 15,
-            "nome": "Jesus Curitibano",
+            "nome": "Lievore",
             "valor": "70"
         },
         {
@@ -85,6 +85,11 @@
         },
         {
             "rank_guild": 17,
+            "nome": "Sir Ignorance",
+            "valor": "67"
+        },
+        {
+            "rank_guild": 18,
             "nome": "Marola Games",
             "valor": "67"
         }
