@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculadora de Runas</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="nav.css"> </head>
+    <link rel="stylesheet" href="nav.css">
+</head>
 <body>
     
     <div class="header-titulo">
@@ -22,7 +23,7 @@
     <div class="container">
         <h1>Calculadora de Runas</h1>
         
-        <div class="selectors">
+        <div class="selectors"> 
             
             <div class="selector-group">
                 <label for="runa">Escolha a runa:</label>
@@ -32,11 +33,29 @@
 
             <div class="selector-group">
                 <label for="vocacao">Escolha a vocação:</label>
-                <select id="vocacao"></select>
+                <select id="vocacao" onchange="calcularTempo()"></select>
             </div>
             
         </div>
-
+        
+        <div class="regen-boosts-container"> 
+            <div class="regen-boosts">
+                <p class="boosts-title">Regen Extra:</p>
+                
+                <label>
+                    <input type="checkbox" id="giantSaphire" onchange="calcularTempo()">
+                    Giant Saphire (+1 mana/3s)
+                </label>
+                
+                <label>
+                    <input type="checkbox" id="lifeRing" name="regenRing" onchange="handleRingExclusivity('lifeRing')"> Life Ring (+1 mana/3s)
+                </label>
+                
+                <label>
+                    <input type="checkbox" id="ringOfHealing" name="regenRing" onchange="handleRingExclusivity('ringOfHealing')"> Ring of Healing (+1 mana/1s)
+                </label>
+            </div>
+        </div>
         <div class="resultado">
             <img id="runaImg" src="hmm.gif" alt="Runa" class="runa-img">
             
@@ -54,6 +73,12 @@
                     <img id="foodImg" src="" alt="Food" class="food-img" style="display:none;">
                     <p id="foodBP_quantity" class="food-text">--</p>
                 </div>
+                
+                <div class="regen-results-area">
+                    <p id="saphire-info">Giant Saphire: --</p>
+                    <p id="ring-info">Ring: --</p>
+                </div>
+                
             </div>
         </div>
     </div>

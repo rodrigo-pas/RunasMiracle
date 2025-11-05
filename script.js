@@ -1,3 +1,7 @@
+// =================================================================
+// DADOS BASE E RUNAS
+// =================================================================
+
 const runas = {
     hmm: { 
         nome: "Heavy Magic Missile",
@@ -161,7 +165,6 @@ const runas = {
         imagem: "soulfire.gif", 
         vocacoes: ["Sorcerer", "Master Sorcerer", "Druid", "Elder Druid"] 
     }
-
 };
 
 const vocacoes = {
@@ -180,6 +183,22 @@ const foods = {
 };
 
 
+// =================================================================
+// DADOS DE REGENERAÇÃO DE MANA EXTRA (NOVOS)
+// As taxas são Mana por Segundo (M/S) e Duração em Segundos (S)
+// =================================================================
+
+const REGEN_BOOSTS = {
+    giantSaphire: { nome: "Giant Saphire Amulet", duracao: 5400, regen_ms: 1/3 }, // 1 mana/3s. Duração: 1h30m = 5400s
+    lifeRing: { nome: "Life Ring", duracao: 1200, regen_ms: 1/3 }, // 1 mana/3s. Duração: 20m = 1200s
+    ringOfHealing: { nome: "Ring of Healing", duracao: 450, regen_ms: 1/1 } // 1 mana/1s. Duração: 7m30s = 450s
+};
+
+
+// =================================================================
+// FUNÇÕES DE CONTROLE E UI
+// =================================================================
+
 function atualizarRuna() {
     const runaSelecionada = document.getElementById("runa").value;
     const vocacaoSelect = document.getElementById("vocacao");
@@ -197,47 +216,161 @@ function atualizarRuna() {
         vocacaoSelect.appendChild(opt);
     });
 
+    popularFoods();
     calcularTempo();
 }
+
+function popularRunas() {
+    const runaSelect = document.getElementById("runa");
+    runaSelect.innerHTML = ""; 
+
+    for (const key in runas) {
+        const runa = runas[key];
+        const opt = document.createElement("option");
+        opt.value = key;
+        opt.textContent = runa.nome;
+        runaSelect.appendChild(opt);
+    }
+}
+
+function popularFoods() {
+    const foodSelect = document.getElementById("food");
+    foodSelect.innerHTML = ""; 
+
+    for (const key in foods) {
+        const food = foods[key];
+        const opt = document.createElement("option");
+        opt.value = key;
+        opt.textContent = food.nome;
+        foodSelect.appendChild(opt);
+    }
+}
+
+
+// NOVO: Função para garantir que apenas um ring de regen esteja selecionado
+function handleRingExclusivity(changedId) {
+    const lifeRing = document.getElementById('lifeRing');
+    const ringOfHealing = document.getElementById('ringOfHealing');
+
+    // Regra: Os dois rings são mutuamente exclusivos.
+    
+    // Se o Life Ring foi clicado e está checado, desmarca o Ring of Healing
+    if (changedId === 'lifeRing' && lifeRing.checked) {
+        ringOfHealing.checked = false;
+    }
+    
+    // Se o Ring of Healing foi clicado e está checado, desmarca o Life Ring
+    else if (changedId === 'ringOfHealing' && ringOfHealing.checked) {
+        lifeRing.checked = false;
+    }
+
+    // Depois de garantir a exclusividade, chama a função de cálculo principal
+    calcularTempo();
+}
+
+
+// =================================================================
+// LÓGICA PRINCIPAL DE CÁLCULO (REESCRITA PARA INCLUIR BOOSTS)
+// =================================================================
 
 function calcularTempo() {
     const runaSelecionada = document.getElementById("runa").value;
     const vocacaoSelecionada = document.getElementById("vocacao").value;
     const foodSelecionada = document.getElementById("food").value; 
 
+    // --- 1. COLETA DE ESTADO DOS BOOSTS E CONTROLES ---
+    const checkSaphire = document.getElementById("giantSaphire");
+    const checkLifeRing = document.getElementById("lifeRing");
+    const checkRoH = document.getElementById("ringOfHealing");
+
+    const useSaphire = checkSaphire.checked;
+    // O estado dos rings já está correto aqui graças à handleRingExclusivity()
+    const useLifeRing = checkLifeRing.checked; 
+    const useRoH = checkRoH.checked;
+
     if (!runaSelecionada || !vocacaoSelecionada) return;
 
     const runa = runas[runaSelecionada];
-    const regen = vocacoes[vocacaoSelecionada];
+    let regenBase = vocacoes[vocacaoSelecionada];
+    let regenTotal = regenBase;
     
-    // Calcula tempo em segundos
-    const tempoRunaSeg = runa.mana / regen; 
+    let saphireManaMS = 0;
+    let ringManaMS = 0;
+    let ringNome = "Nenhum";
     
+    let saphireDuracao = 0;
+    let ringDuracao = 0;
+
+
+    // --- 2. CÁLCULO DAS REGENS EXTRAS ---
+    
+    // A. Giant Saphire Amulet
+    if (useSaphire) {
+        saphireManaMS = REGEN_BOOSTS.giantSaphire.regen_ms;
+        saphireDuracao = REGEN_BOOSTS.giantSaphire.duracao;
+    }
+
+    // B. Ring Escolhido (Lógica simplificada após a exclusividade ser garantida no HTML/JS)
+    if (useRoH) {
+        ringManaMS = REGEN_BOOSTS.ringOfHealing.regen_ms;
+        ringDuracao = REGEN_BOOSTS.ringOfHealing.duracao;
+        ringNome = REGEN_BOOSTS.ringOfHealing.nome;
+    } else if (useLifeRing) {
+        ringManaMS = REGEN_BOOSTS.lifeRing.regen_ms;
+        ringDuracao = REGEN_BOOSTS.lifeRing.duracao;
+        ringNome = REGEN_BOOSTS.lifeRing.nome;
+    }
+
+    // C. Acumulação: Soma a regeneração
+    regenTotal += saphireManaMS + ringManaMS;
+
+
+    // --- 3. CÁLCULO DE TEMPO E BP (BACKPACK) ---
+    
+    // Tempo (segundos) = Mana total / Mana por Segundo Total
+    const tempoRunaSeg = runa.mana / regenTotal; 
     const tempoBP = tempoRunaSeg * 20;
 
+    // Exibição do Tempo
     document.getElementById("tempoRuna").textContent = `Tempo para 1 runa: ${formatarTempo(tempoRunaSeg)}`;
-    document.getElementById("tempoBP").textContent = `Tempo para 1 backpack: ${formatarTempo(tempoBP)}`;
+    document.getElementById("tempoBP").textContent = `Tempo para 1 backpack (20): ${formatarTempo(tempoBP)}`;
 
-    // --- CÁLCULO E EXIBIÇÃO DA FOOD ---
+
+    // --- 4. CÁLCULO DE CONSUMÍVEIS (FOODS) ---
     
-    // 1. As variáveis precisam ser definidas ANTES de serem usadas!
     const food = foods[foodSelecionada];
     const foodsNecessarias = Math.ceil(tempoBP / food.duracao);
     
-    // 2. Atualizar a imagem da food e mostrar
-    const foodImgElement = document.getElementById("foodImg");
-    foodImgElement.src = food.imagem;
-    foodImgElement.style.display = 'inline-block';
-    
-    // 3. ATUALIZA A QUANTIDADE: Usa o novo ID "foodBP_quantity" para mostrar SÓ a quantidade.
+    // Exibição da Food
     document.getElementById("foodBP_quantity").textContent =
         `${foodsNecessarias} ${food.nome}${foodsNecessarias > 1 ? "s" : ""}`;
-    
-    // Nota: O título "Foods necessárias para 1 BP:" agora é um elemento estático no HTML (foodBP_title) 
-    // e não precisa ser preenchido pelo JS.
 
+
+    // --- 5. CÁLCULO E EXIBIÇÃO DE BOOSTS (AMULETS/RINGS) ---
+    
+    // A. Giant Saphire
+    if (useSaphire) {
+        const saphireNecessarios = Math.ceil(tempoBP / saphireDuracao);
+        document.getElementById("saphire-info").textContent = 
+            `Giant Saphire: ${saphireNecessarios}x (dura total: ${formatarTempo(saphireNecessarios * saphireDuracao)})`;
+    } else {
+        document.getElementById("saphire-info").textContent = "Giant Saphire: Não utilizado.";
+    }
+
+    // B. Ring
+    if (useRoH || useLifeRing) {
+        const ringNecessarios = Math.ceil(tempoBP / ringDuracao);
+        document.getElementById("ring-info").textContent = 
+            `${ringNome}: ${ringNecessarios}x (dura total: ${formatarTempo(ringNecessarios * ringDuracao)})`;
+    } else {
+        document.getElementById("ring-info").textContent = "Ring: Nenhum utilizado.";
+    }
 }
 
+
+// =================================================================
+// FUNÇÕES DE FORMATAÇÃO E INICIALIZAÇÃO
+// =================================================================
 
 function formatarTempo(segundos) {
     const h = Math.floor(segundos / 3600);
@@ -246,38 +379,69 @@ function formatarTempo(segundos) {
     return `${h}h ${m}m ${s}s`;
 }
 
-function popularFoods() {
-    const foodSelect = document.getElementById("food");
-    foodSelect.innerHTML = ""; // Limpa qualquer opção existente
-
-    // Itera sobre todas as keys (d_ham, orange, b_mush, etc) no objeto foods
-    for (const key in foods) {
-        const food = foods[key];
-        const opt = document.createElement("option");
-        opt.value = key; // O valor será 'd_ham', 'orange', etc.
-        opt.textContent = food.nome; // O texto será 'Dragon Ham', 'Orange', etc.
-        foodSelect.appendChild(opt);
-    }
-}
-
 function popularRunas() {
     const runaSelect = document.getElementById("runa");
-    runaSelect.innerHTML = ""; // Limpa qualquer opção existente
+    runaSelect.innerHTML = ""; 
 
-    // Itera sobre todas as keys (hmm, uh, etc) no objeto runas
     for (const key in runas) {
         const runa = runas[key];
         const opt = document.createElement("option");
-        opt.value = key; // O valor será 'hmm', 'uh', etc.
-        opt.textContent = runa.nome; // O texto será 'Heavy Magic Missile', etc.
+        opt.value = key;
+        opt.textContent = runa.nome;
         runaSelect.appendChild(opt);
     }
 }
 
-// Inicialização
+function popularFoods() {
+    const foodSelect = document.getElementById("food");
+    foodSelect.innerHTML = ""; 
+
+    for (const key in foods) {
+        const food = foods[key];
+        const opt = document.createElement("option");
+        opt.value = key;
+        opt.textContent = food.nome;
+        foodSelect.appendChild(opt);
+    }
+}
+
+function atualizarRuna() {
+    const runaSelecionada = document.getElementById("runa").value;
+    const vocacaoSelect = document.getElementById("vocacao");
+    const runa = runas[runaSelecionada];
+
+    // Atualiza imagem da runa
+    document.getElementById("runaImg").src = runa.imagem;
+
+    // Atualiza lista de vocações permitidas
+    vocacaoSelect.innerHTML = "";
+    runa.vocacoes.forEach(v => {
+        const opt = document.createElement("option");
+        opt.value = v;
+        opt.textContent = v;
+        vocacaoSelect.appendChild(opt);
+    });
+
+    popularFoods();
+    calcularTempo();
+}
+
+
+// =================================================================
+// INICIALIZAÇÃO E EVENT LISTENERS (NOVOS HANDLERS ADICIONADOS)
+// =================================================================
+
+// Listeners de seleção (Existentes)
 document.getElementById("runa").addEventListener("change", atualizarRuna);
 document.getElementById("vocacao").addEventListener("change", calcularTempo);
 document.getElementById("food").addEventListener("change", calcularTempo);
+
+// Listeners para os Checkboxes e a Função de Exclusividade
+document.getElementById("giantSaphire").addEventListener("change", calcularTempo);
+document.getElementById("lifeRing").addEventListener("change", (e) => handleRingExclusivity(e.target.id)); 
+document.getElementById("ringOfHealing").addEventListener("change", (e) => handleRingExclusivity(e.target.id));
+
+
 popularRunas();
-popularFoods();
+// O call para atualizarRuna() irá chamar popularFoods() e calcularTempo()
 atualizarRuna();

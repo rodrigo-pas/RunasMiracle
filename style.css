@@ -4,8 +4,7 @@ body {
     font-family: Arial, sans-serif;
     display: flex;
     flex-direction: column; 
-    justify-content: center;
-    align-items: center;
+    align-items: center; 
     min-height: 100vh;
     margin: 0;
     padding-top: 50px; 
@@ -22,8 +21,9 @@ body {
     left: 50%;
     transform: translateX(-50%); 
 
-    color: #d3d3d3; /* Cinza claro, como solicitado */
+    color: #d3d3d3; /* Cinza claro */
     text-shadow: 0 0 5px #ff6; 
+    z-index: 500; 
 }
 
 .titulo-analyser {
@@ -46,16 +46,68 @@ body {
     padding: 30px;
     border-radius: 15px;
     box-shadow: 0 0 10px #000;
-    margin-top: 100px; 
+    margin-top: 20px; 
+    max-width: 800px;
+    width: 95%;
 }
 
-/* NOVO: ESTILO PARA COLOCAR RUNA E VOCAÇÃO LADO A LADO */
+/* CONTAINER FLEXBOX PARA RUNA E VOCAÇÃO (PRIMEIRA LINHA) */
 .selectors {
-    margin-bottom: 20px;
+    margin-bottom: 5px; 
     display: flex; 
     justify-content: center;
-    gap: 30px; /* Espaço entre os dois dropdowns */
+    gap: 30px; 
+    flex-wrap: wrap; 
 }
+
+/* NOVO: CONTAINER ENVOLTÓRIO PARA CENTRALIZAR O BLOCO DE BOOSTS NA LINHA DE BAIXO */
+.regen-boosts-container {
+    width: 100%;
+    display: flex;
+    justify-content: center; /* CENTRALIZA O BLOCO INTERNO */
+    margin-bottom: 20px;
+}
+
+/* ESTILO DO BLOCO DE BOOSTS (MENOR E CENTRALIZADO) */
+.regen-boosts {
+    display: flex; 
+    flex-direction: column; 
+    align-items: flex-start; /* Mantém checkboxes alinhados à esquerda */
+    padding: 10px;
+    
+    /* LARGURA AJUSTADA */
+    max-width: 350px; /* Largura para o 'quadrado' de boosts */
+    width: 100%;
+    
+    border: 1px solid #444; 
+    border-radius: 8px;
+    background-color: #333;
+}
+
+.boosts-title {
+    font-weight: bold;
+    color: #5f84ce; /* Cor de destaque */
+    margin-bottom: 5px;
+    font-size: 0.9em;
+    text-transform: uppercase;
+    width: 100%;          /* GARANTE LARGURA PARA CENTRALIZAR */
+    text-align: center;   /* <-- CORREÇÃO APLICADA AQUI */
+}
+
+.regen-boosts label {
+    margin-top: 5px;
+    font-weight: normal; 
+    display: flex; 
+    align-items: center;
+    cursor: pointer;
+}
+
+.regen-boosts input[type="checkbox"] {
+    margin-right: 8px;
+    width: 14px;
+    height: 14px;
+}
+
 
 /* NOVO: ESTILO PARA COLOCAR LABEL ACIMA DO SELECT */
 .selector-group {
@@ -124,6 +176,28 @@ label {
     margin: 0;
 }
 
+#foodBP_title {
+    font-size: 18px; 
+    margin-bottom: 5px; 
+    font-weight: bold;
+    text-align: center; 
+}
+
+/* NOVO: ESTILOS PARA A ÁREA DE RESULTADOS DO REGEN */
+.regen-results-area {
+    margin-top: 15px;
+    padding-top: 10px;
+    border-top: 1px dashed #3a3a3a; /* Linha pontilhada para separar da food */
+    text-align: center;
+}
+
+.regen-results-area p {
+    font-size: 16px;
+    margin: 5px 0;
+    color: #aaa; /* Cor mais suave para as informações de duração */
+}
+
+
 /* --- ESTILOS PARA O RODAPÉ --- */
 .rodape-bydrak {
     position: fixed;
@@ -137,11 +211,4 @@ label {
     padding: 10px 0;
     font-size: 0.9em;
     z-index: 100;
-}
-#foodBP_title {
-    font-size: 18px; 
-    margin-bottom: 5px; 
-    font-weight: bold;
-    /* Centraliza o texto */
-    text-align: center; 
 }
