@@ -1,5 +1,5 @@
 {
-    "timestamp": "2025-11-05 09:39:41",
+    "timestamp": "2025-11-08 12:10:01",
     "skill_name": "Shielding",
     "value_type": "Skill",
     "ranking": [
@@ -50,22 +50,22 @@
         },
         {
             "rank_guild": 10,
-            "nome": "Miu Miu",
-            "valor": "73"
+            "nome": "Panisset",
+            "valor": "74"
         },
         {
             "rank_guild": 11,
-            "nome": "Panisset",
-            "valor": "72"
+            "nome": "Miu Miu",
+            "valor": "74"
         },
         {
             "rank_guild": 12,
-            "nome": "Rejeitada",
+            "nome": "Caco De Vidro",
             "valor": "71"
         },
         {
             "rank_guild": 13,
-            "nome": "Caco De Vidro",
+            "nome": "Rejeitada",
             "valor": "71"
         },
         {
@@ -80,13 +80,13 @@
         },
         {
             "rank_guild": 16,
-            "nome": "Paul Atreidess",
-            "valor": "68"
+            "nome": "Sir Ignorance",
+            "valor": "69"
         },
         {
             "rank_guild": 17,
-            "nome": "Sir Ignorance",
-            "valor": "67"
+            "nome": "Paul Atreidess",
+            "valor": "69"
         },
         {
             "rank_guild": 18,
