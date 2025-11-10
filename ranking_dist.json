@@ -1,5 +1,5 @@
 {
-    "timestamp": "2025-11-08 12:09:30",
+    "timestamp": "2025-11-10 09:09:26",
     "skill_name": "Distance",
     "value_type": "Skill",
     "ranking": [
@@ -11,17 +11,17 @@
         {
             "rank_guild": 2,
             "nome": "Lievore",
-            "valor": "89"
+            "valor": "90"
         },
         {
             "rank_guild": 3,
-            "nome": "Brisolina",
+            "nome": "Guineks Pcd",
             "valor": "83"
         },
         {
             "rank_guild": 4,
-            "nome": "Guineks Pcd",
-            "valor": "81"
+            "nome": "Brisolina",
+            "valor": "83"
         },
         {
             "rank_guild": 5,
@@ -36,7 +36,7 @@
         {
             "rank_guild": 7,
             "nome": "Sabhugo",
-            "valor": "79"
+            "valor": "80"
         },
         {
             "rank_guild": 8,

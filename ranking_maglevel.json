@@ -1,5 +1,5 @@
 {
-    "timestamp": "2025-11-08 12:09:45",
+    "timestamp": "2025-11-10 09:09:39",
     "skill_name": "Magic Level",
     "value_type": "Skill",
     "ranking": [
@@ -15,13 +15,13 @@
         },
         {
             "rank_guild": 3,
-            "nome": "Dalle",
+            "nome": "Thomas Turbando",
             "valor": "54"
         },
         {
             "rank_guild": 4,
-            "nome": "Thomas Turbando",
-            "valor": "53"
+            "nome": "Dalle",
+            "valor": "54"
         },
         {
             "rank_guild": 5,

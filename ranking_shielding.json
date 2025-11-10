@@ -1,5 +1,5 @@
 {
-    "timestamp": "2025-11-08 12:10:01",
+    "timestamp": "2025-11-10 09:09:52",
     "skill_name": "Shielding",
     "value_type": "Skill",
     "ranking": [
@@ -11,7 +11,7 @@
         {
             "rank_guild": 2,
             "nome": "Umbabarauma Homemgol",
-            "valor": "86"
+            "valor": "87"
         },
         {
             "rank_guild": 3,
@@ -30,12 +30,12 @@
         },
         {
             "rank_guild": 6,
-            "nome": "Sr Milagre",
-            "valor": "76"
+            "nome": "Drady Legend",
+            "valor": "77"
         },
         {
             "rank_guild": 7,
-            "nome": "Drady Legend",
+            "nome": "Sr Milagre",
             "valor": "76"
         },
         {
@@ -61,7 +61,7 @@
         {
             "rank_guild": 12,
             "nome": "Caco De Vidro",
-            "valor": "71"
+            "valor": "72"
         },
         {
             "rank_guild": 13,
@@ -70,26 +70,21 @@
         },
         {
             "rank_guild": 14,
-            "nome": "Jesus Curitibano",
-            "valor": "70"
+            "nome": "Lievore",
+            "valor": "71"
         },
         {
             "rank_guild": 15,
-            "nome": "Lievore",
+            "nome": "Sir Ignorance",
             "valor": "70"
         },
         {
             "rank_guild": 16,
-            "nome": "Sir Ignorance",
-            "valor": "69"
-        },
-        {
-            "rank_guild": 17,
             "nome": "Paul Atreidess",
             "valor": "69"
         },
         {
-            "rank_guild": 18,
+            "rank_guild": 17,
             "nome": "Marola Games",
             "valor": "67"
         }

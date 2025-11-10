@@ -1,5 +1,5 @@
 {
-    "timestamp": "2025-11-08 12:09:15",
+    "timestamp": "2025-11-10 09:09:14",
     "skill_name": "Club",
     "value_type": "Skill",
     "ranking": [
@@ -16,7 +16,7 @@
         {
             "rank_guild": 3,
             "nome": "Panda Club",
-            "valor": "47"
+            "valor": "50"
         }
     ]
 }
