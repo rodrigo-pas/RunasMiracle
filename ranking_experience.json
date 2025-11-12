@@ -1,5 +1,5 @@
 {
-    "timestamp": "2025-11-10 09:08:33",
+    "timestamp": "2025-11-12 10:01:14",
     "skill_name": "Level / Exp",
     "value_type": "Level",
     "ranking": [
@@ -11,7 +11,7 @@
         {
             "rank_guild": 2,
             "nome": "Potasu",
-            "valor": "105"
+            "valor": "106"
         },
         {
             "rank_guild": 3,
@@ -21,7 +21,7 @@
         {
             "rank_guild": 4,
             "nome": "Coronel Tiburcio",
-            "valor": "89"
+            "valor": "90"
         },
         {
             "rank_guild": 5,
@@ -36,7 +36,7 @@
         {
             "rank_guild": 7,
             "nome": "Brisolina",
-            "valor": "71"
+            "valor": "72"
         },
         {
             "rank_guild": 8,

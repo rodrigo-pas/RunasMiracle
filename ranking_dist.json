@@ -1,5 +1,5 @@
 {
-    "timestamp": "2025-11-10 09:09:26",
+    "timestamp": "2025-11-12 10:02:04",
     "skill_name": "Distance",
     "value_type": "Skill",
     "ranking": [
@@ -11,17 +11,17 @@
         {
             "rank_guild": 2,
             "nome": "Lievore",
-            "valor": "90"
+            "valor": "89"
         },
         {
             "rank_guild": 3,
             "nome": "Guineks Pcd",
-            "valor": "83"
+            "valor": "85"
         },
         {
             "rank_guild": 4,
             "nome": "Brisolina",
-            "valor": "83"
+            "valor": "84"
         },
         {
             "rank_guild": 5,
@@ -30,12 +30,12 @@
         },
         {
             "rank_guild": 6,
-            "nome": "Gravida De Taubate",
+            "nome": "Sabhugo",
             "valor": "80"
         },
         {
             "rank_guild": 7,
-            "nome": "Sabhugo",
+            "nome": "Gravida De Taubate",
             "valor": "80"
         },
         {
@@ -45,12 +45,12 @@
         },
         {
             "rank_guild": 9,
-            "nome": "Asia Jack",
-            "valor": "71"
+            "nome": "Rents Perecido",
+            "valor": "72"
         },
         {
             "rank_guild": 10,
-            "nome": "Rents Perecido",
+            "nome": "Asia Jack",
             "valor": "71"
         }
     ]
