@@ -1,5 +1,5 @@
 {
-    "timestamp": "2025-11-12 10:02:28",
+    "timestamp": "2025-11-14 09:19:52",
     "skill_name": "Shielding",
     "value_type": "Skill",
     "ranking": [
@@ -40,32 +40,32 @@
         },
         {
             "rank_guild": 8,
-            "nome": "Panisset",
-            "valor": "75"
-        },
-        {
-            "rank_guild": 9,
-            "nome": "Miu Miu",
-            "valor": "75"
-        },
-        {
-            "rank_guild": 10,
             "nome": "Luis Espalha Lixo",
             "valor": "75"
         },
         {
-            "rank_guild": 11,
+            "rank_guild": 9,
             "nome": "Holth",
             "valor": "75"
         },
         {
+            "rank_guild": 10,
+            "nome": "Panisset",
+            "valor": "75"
+        },
+        {
+            "rank_guild": 11,
+            "nome": "Miu Miu",
+            "valor": "75"
+        },
+        {
             "rank_guild": 12,
-            "nome": "Rejeitada",
-            "valor": "72"
+            "nome": "Caco De Vidro",
+            "valor": "73"
         },
         {
             "rank_guild": 13,
-            "nome": "Caco De Vidro",
+            "nome": "Rejeitada",
             "valor": "72"
         },
         {
@@ -82,6 +82,11 @@
             "rank_guild": 16,
             "nome": "Paul Atreidess",
             "valor": "69"
+        },
+        {
+            "rank_guild": 17,
+            "nome": "Charlie Nelson",
+            "valor": "68"
         }
     ]
 }

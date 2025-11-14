@@ -1,0 +1,57 @@
+{
+    "timestamp": "2025-11-14 09:22:05",
+    "skill_name": "Mage Combat Skills",
+    "value_type": "Skill",
+    "ranking": [
+        {
+            "rank_guild": 1,
+            "nome": "Tupi-guarani",
+            "valor": "23 (Sword)"
+        },
+        {
+            "rank_guild": 2,
+            "nome": "Leafar Druidante",
+            "valor": "21 (Club)"
+        },
+        {
+            "rank_guild": 3,
+            "nome": "Dalle",
+            "valor": "20 (Sword)"
+        },
+        {
+            "rank_guild": 4,
+            "nome": "Thomas Turbando",
+            "valor": "20 (Sword)"
+        },
+        {
+            "rank_guild": 5,
+            "nome": "Bruxinho",
+            "valor": "20 (Club)"
+        },
+        {
+            "rank_guild": 6,
+            "nome": "Chiconelas",
+            "valor": "20 (Axe)"
+        },
+        {
+            "rank_guild": 7,
+            "nome": "Citoplasma",
+            "valor": "19 (Sword)"
+        },
+        {
+            "rank_guild": 8,
+            "nome": "Ze Pafuncho",
+            "valor": "19 (Club)"
+        },
+        {
+            "rank_guild": 9,
+            "nome": "Sir Kustela",
+            "valor": "19 (Club)"
+        },
+        {
+            "rank_guild": 10,
+            "nome": "Mr Green",
+            "valor": "18 (Club)"
+        }
+    ]
+}

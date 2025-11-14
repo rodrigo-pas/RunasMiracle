@@ -1,6 +1,6 @@
-// Os nomes das SKILLS devem ser os mesmos que você usou no Python (as chaves do dicionário)
+// SKILLS utilizadas no python (dicionário)
 const SKILLS_MAP = {
-    'experience': 'Level / Exp',
+    'experience': 'Level',
     'sword': 'Sword',
     'axe': 'Axe',
     'club': 'Club',
@@ -8,53 +8,68 @@ const SKILLS_MAP = {
     'maglevel': 'Magic Level',
     'shielding': 'Shielding',
     'fishing': 'Fishing',
+    'mage_skill': 'Mage Skills' 
 };
 
 // 1. Cria os botões de skill no HTML
 function createSkillButtons() {
     const selectorDiv = document.getElementById('skill-selectors');
+    if (!selectorDiv) return;
+    
     selectorDiv.innerHTML = ''; // Limpa antes de popular
+    let firstButtonKey = null;
 
     for (const key in SKILLS_MAP) {
+        if (!firstButtonKey) {
+            firstButtonKey = key;
+        }
         const button = document.createElement('button');
         button.textContent = SKILLS_MAP[key];
         button.className = 'skill-button';
-        button.onclick = () => loadRanking(key); // Chama a função com a chave da skill (ex: 'sword')
+        button.setAttribute('data-skill-key', key); // Usado para referenciar o botão no loadRanking
+        
+        // CORREÇÃO: Passa a referência do botão e usa event.currentTarget para o clique
+        button.onclick = (event) => loadRanking(key, event.currentTarget); 
+        
         selectorDiv.appendChild(button);
     }
 }
 
 // 2. Carrega o arquivo JSON e exibe o ranking
-async function loadRanking(skillKey) {
+async function loadRanking(skillKey, clickedButton) {
     const resultsDiv = document.getElementById('ranking-results');
     const updateTimeElement = document.getElementById('last-update');
     const titleElement = document.getElementById('current-skill-title');
     
     // Altera o estado visual dos botões
     document.querySelectorAll('.skill-button').forEach(btn => btn.classList.remove('active'));
-    event.target.classList.add('active'); 
+    if (clickedButton) {
+        clickedButton.classList.add('active');
+    }
 
     titleElement.textContent = `Carregando Ranking de ${SKILLS_MAP[skillKey]}...`;
     resultsDiv.innerHTML = '<p>Buscando dados...</p>';
     updateTimeElement.textContent = 'Última atualização: Carregando...';
 
-    const fileName = `ranking_${skillKey}.json`;
+    // --- CORREÇÃO DE CACHE: Adiciona o timestamp para forçar a atualização ---
+    const timestamp = new Date().getTime();
+    const fileName = `ranking_${skillKey}.json?v=${timestamp}`;
+    // --- FIM DA CORREÇÃO DE CACHE ---
     
     try {
-        // Faz a requisição para o arquivo JSON (fetch)
         const response = await fetch(fileName);
         
         if (!response.ok) {
+            // Se der erro 404, o arquivo não existe ou a chave do JSON está errada
             throw new Error(`Erro HTTP! Status: ${response.status}`);
         }
         
         const data = await response.json();
         
-        // Se a requisição for bem-sucedida, gera a tabela
         displayRanking(data);
 
     } catch (error) {
-        resultsDiv.innerHTML = `<p class="error-message">Erro ao carregar o arquivo ${fileName}. Certifique-se de que ele foi gerado e enviado para o GitHub.</p>`;
+        resultsDiv.innerHTML = `<p class="error-message">Erro ao carregar o ranking. O arquivo "${fileName.split('?')[0]}" pode não existir ou a rede falhou.</p>`;
         updateTimeElement.textContent = `Última atualização: Falha!`;
         console.error('Erro ao carregar ranking:', error);
     }
@@ -68,20 +83,14 @@ function displayRanking(data) {
     
     titleElement.textContent = `TOP ${data.value_type} - ${data.skill_name}`;
     
-    // --- CORREÇÃO DA DATA PARA O PADRÃO BRASILEIRO ---
-    const timestamp = data.timestamp; // Ex: "2025-11-03 12:00:00"
-    
-    // Divide o timestamp em Data e Hora
+    // --- FORMATAÇÃO DA DATA PARA DD/MM/YYYY ---
+    const timestamp = data.timestamp; 
     const [datePart, timePart] = timestamp.split(' ');
-    
-    // Reverte a ordem da data de YYYY-MM-DD para DD/MM/YYYY
     const formattedDate = datePart.split('-').reverse().join('/'); 
-    
-    // Junta a nova data com a hora
     const formattedTimestamp = `${formattedDate} ${timePart}`; 
 
     updateTimeElement.textContent = `Última atualização: ${formattedTimestamp}`;
-    // --- FIM DA CORREÇÃO DA DATA ---
+    // --- FIM DA FORMATAÇÃO DA DATA ---
     
     if (data.ranking.length === 0) {
         resultsDiv.innerHTML = `<p>Nenhum membro da guilda encontrado no ranking global de ${data.skill_name}.</p>`;
@@ -121,11 +130,12 @@ function displayRanking(data) {
 // Inicialização: Cria os botões quando a página carrega
 document.addEventListener('DOMContentLoaded', createSkillButtons);
 
-// Opcional: Carrega o ranking de Experience por padrão na primeira carga
+// Carrega o ranking de Experience por padrão na primeira carga
 document.addEventListener('DOMContentLoaded', () => {
-    // Adiciona um pequeno delay para garantir que os botões sejam criados antes de tentar o clique
+    // Adiciona um pequeno delay para garantir que os botões sejam criados
     setTimeout(() => {
-        const experienceButton = document.querySelector('.skill-button');
+        // Encontra o botão de 'experience' pelo atributo data-skill-key
+        const experienceButton = document.querySelector('[data-skill-key="experience"]');
         if (experienceButton) {
             experienceButton.click();
         }

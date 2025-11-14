@@ -1,5 +1,5 @@
 {
-    "timestamp": "2025-11-12 10:02:41",
+    "timestamp": "2025-11-14 09:20:04",
     "skill_name": "Fishing",
     "value_type": "Skill",
     "ranking": [
@@ -10,18 +10,18 @@
         },
         {
             "rank_guild": 2,
-            "nome": "Citoplasma",
+            "nome": "Panisset",
             "valor": "34"
         },
         {
             "rank_guild": 3,
-            "nome": "Panisset",
+            "nome": "Citoplasma",
             "valor": "34"
         },
         {
             "rank_guild": 4,
             "nome": "Thomas Turbando",
-            "valor": "32"
+            "valor": "33"
         },
         {
             "rank_guild": 5,

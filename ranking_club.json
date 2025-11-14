@@ -1,5 +1,5 @@
 {
-    "timestamp": "2025-11-12 10:01:51",
+    "timestamp": "2025-11-14 09:19:14",
     "skill_name": "Club",
     "value_type": "Skill",
     "ranking": [
@@ -15,8 +15,13 @@
         },
         {
             "rank_guild": 3,
+            "nome": "Charlie Nelson",
+            "valor": "75"
+        },
+        {
+            "rank_guild": 4,
             "nome": "Panda Club",
-            "valor": "53"
+            "valor": "58"
         }
     ]
 }

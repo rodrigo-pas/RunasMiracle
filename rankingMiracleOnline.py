@@ -5,7 +5,7 @@ from tkinter import scrolledtext, messagebox, filedialog
 from threading import Thread
 from datetime import datetime, timedelta
 import json
-from time import sleep # Adicionado para dar um pequeno intervalo entre as requisições
+from time import sleep # Importado para pausar requisições
 
 # Dicionário de skills para criar os botões
 SKILLS = {
@@ -17,6 +17,7 @@ SKILLS = {
     'maglevel': 'Magic Level',
     'shielding': 'Shielding',
     'fishing': 'Fishing',
+    'mage_skill': 'Mage Combat Skills', # Adicionado para a nova função
 }
 
 # ===============================================
@@ -201,8 +202,12 @@ class GuildAnalyzerApp:
             
             self.root.after(0, lambda s=skill_name: self.results_text.insert(tk.END, f"Iniciando {s}...\n"))
             
-            # Executa o scraping e o salvamento (lógica principal)
-            self.rankear_guild_por_skill(skill_key) 
+            # --- LÓGICA DE CHAMADA DIFERENTE PARA O MAGE SKILL ---
+            if skill_key == 'mage_skill':
+                self.rankear_mage_skills() # Chama a função que faz a agregação de 60 páginas
+            else:
+                # Chama a função padrão para skills individuais
+                self.rankear_guild_por_skill(skill_key) 
             
             self.root.after(0, lambda s=skill_name: self.results_text.insert(tk.END, f"-> {s} Concluído. ({i+1}/{total_skills})\n"))
             
@@ -214,7 +219,7 @@ class GuildAnalyzerApp:
 
 
     def rankear_guild_por_skill(self, skill):
-        """Busca as 10 páginas do ranking, filtra e SALVA como JSON."""
+        """Busca as 10 páginas do ranking, filtra e SALVA como JSON (Para skills individuais)."""
         
         MAX_PAGES = self.MAX_PAGES 
         all_highscores = []
@@ -320,6 +325,134 @@ class GuildAnalyzerApp:
         except Exception as e:
             self.root.after(0, lambda: self.results_text.insert(tk.END, f"ERRO FATAL ao salvar {skill} JSON: {e}\n"))
 
+
+    # ===============================================
+    # NOVO: LÓGICA DE AGREGAÇÃO PARA MAGE SKILLS (60 Páginas)
+    # ===============================================
+    def rankear_mage_skills(self):
+        """Busca 60 páginas (3 weapons x 2 vocations x 10 pages) e agrega o melhor skill. (NOVO)"""
+        
+        mage_data = {} # Armazena o melhor skill encontrado para cada mage
+        
+        weapons = ['sword', 'club', 'axe']
+        # 1: Sorcerer/MS, 2: Druid/ED
+        vocations = {1: 'Sorcerer', 2: 'Druid'} 
+
+        # 1. Loop Principal: Combinação de Armas e Vocações
+        for weapon in weapons:
+            for vocation_id, vocation_name in vocations.items():
+                
+                # 2. Loop de Páginas (1 a 10)
+                for page in range(1, self.MAX_PAGES + 1):
+                    
+                    url = f"https://miracle74.com/?subtopic=highscores&list={weapon}&page={page}&vocation={vocation_id}"
+                    
+                    try:
+                        self.root.after(0, lambda p=page: self.status_var.set(f"Coletando {vocation_name} {weapon.capitalize()} Pág {p}..."))
+                        
+                        # --- PAUSA AQUI (1 SEGUNDO) PARA EVITAR BLOQUEIO 429 ---
+                        sleep(1) 
+
+                        response = requests.get(url, timeout=15)
+                        response.raise_for_status()
+                        soup = BeautifulSoup(response.content, 'html.parser')
+
+                        # A tabela de Highscores é a SEGUNDA 'TableContent' (índice 1)
+                        tables = soup.find_all("table", class_="TableContent")
+                        if len(tables) < 2: 
+                            continue 
+                            
+                        table = tables[1] 
+                        
+                        # Indices da Tabela: 2 (Nome), 5 (Skill Value)
+                        NAME_INDEX = 2
+                        SKILL_VALUE_INDEX = 5 
+                        
+                        # 4. Processamento de Linhas
+                        for row in table.find_all('tr', bgcolor=True):
+                            cells = row.find_all('td')
+                            if len(cells) <= SKILL_VALUE_INDEX: continue 
+                            
+                            name_tag = cells[NAME_INDEX].find('a')
+                            if not name_tag: continue
+                            
+                            name = name_tag.text.strip()
+                            
+                            # Limpa o valor da skill para comparação numérica
+                            skill_value_str = cells[SKILL_VALUE_INDEX].text.strip().replace(',', '').replace('.', '').replace(' ', '')
+                            try:
+                                skill_value = int(skill_value_str) 
+                            except ValueError:
+                                continue # Ignora se o valor não for numérico
+                            
+                            # 5. Lógica de Agregação (Unificar o melhor skill)
+                            if name not in mage_data:
+                                # Primeira vez que o jogador aparece
+                                mage_data[name] = {
+                                    'name': name,
+                                    'best_skill_value': skill_value,
+                                    'best_skill_name': weapon.capitalize(),
+                                    'rank_value': skill_value 
+                                }
+                            else:
+                                # Jogador já existe, checa se a skill atual é melhor
+                                current_best = mage_data[name]['best_skill_value']
+                                if skill_value > current_best:
+                                    mage_data[name]['best_skill_value'] = skill_value
+                                    mage_data[name]['best_skill_name'] = weapon.capitalize()
+                                    mage_data[name]['rank_value'] = skill_value
+                        
+                        self.root.after(0, lambda: self.status_var.set(f"Coletando {vocation_name} {weapon.capitalize()} Pág {page}..."))
+
+
+                    except requests.exceptions.RequestException as e:
+                        self.root.after(0, lambda: self.results_text.insert(tk.END, f"ERRO 429/CONEXÃO: {url}\n"))
+                        continue
+
+        # 6. Ordenação e Filtragem Final
+        guild_names_lower = {name.lower() for name in self.guild_names} 
+        nomes_em_comum = []
+        
+        for name, data in mage_data.items():
+            if name.lower() in guild_names_lower:
+                nomes_em_comum.append({
+                    "nome": data['name'],
+                    "valor_exibir": f"{data['best_skill_value']} ({data['best_skill_name']})", # Valor + Arma
+                    "valor_ordenar": data['best_skill_value'] # Skill pura para ordenar
+                })
+
+        # Ordenação
+        def sort_key(entry):
+            return entry['valor_ordenar']
+            
+        nomes_em_comum.sort(key=sort_key, reverse=True) 
+
+        # 7. Salvar JSON
+        json_data = {
+            "timestamp": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
+            "skill_name": SKILLS['mage_skill'],
+            "value_type": "Skill",
+            "ranking": []
+        }
+        
+        if nomes_em_comum:
+            for rank_na_guild, entry in enumerate(nomes_em_comum, start=1):
+                json_data["ranking"].append({
+                    "rank_guild": rank_na_guild,
+                    "nome": entry['nome'],
+                    "valor": entry['valor_exibir'], # Salva o valor com a arma (ex: 50 (Sword))
+                })
+
+        try:
+            file_name = "ranking_mage_skill.json"
+            with open(file_name, 'w', encoding='utf-8') as f:
+                json.dump(json_data, f, ensure_ascii=False, indent=4)
+            
+            self.root.after(0, lambda: self.results_text.insert(tk.END, f"  -> JSON '{file_name}' salvo com {len(nomes_em_comum)} membros.\n"))
+            
+        except Exception as e:
+            self.root.after(0, lambda: self.results_text.insert(tk.END, f"ERRO FATAL ao salvar MAGE SKILL JSON: {e}\n"))
+        
     # ===============================================
     # FUNÇÕES DE UI E AUXILIARES
     # ===============================================
@@ -329,12 +462,10 @@ class GuildAnalyzerApp:
         self.status_var.set("Campos limpos")
 
     def disable_all_buttons(self):
-        # Desabilita o botão principal de geração
         if hasattr(self, 'generate_button'):
             self.generate_button.config(state=tk.DISABLED)
 
     def enable_all_buttons(self):
-        # Reabilita o botão principal de geração
         if hasattr(self, 'generate_button'):
             self.generate_button.config(state=tk.NORMAL)
             
