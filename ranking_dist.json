@@ -1,5 +1,5 @@
 {
-    "timestamp": "2025-11-14 09:19:26",
+    "timestamp": "2025-11-17 08:09:28",
     "skill_name": "Distance",
     "value_type": "Skill",
     "ranking": [
@@ -16,12 +16,12 @@
         {
             "rank_guild": 3,
             "nome": "Guineks Pcd",
-            "valor": "86"
+            "valor": "87"
         },
         {
             "rank_guild": 4,
             "nome": "Brisolina",
-            "valor": "84"
+            "valor": "85"
         },
         {
             "rank_guild": 5,
@@ -30,31 +30,26 @@
         },
         {
             "rank_guild": 6,
-            "nome": "Sabhugo",
-            "valor": "80"
-        },
-        {
-            "rank_guild": 7,
             "nome": "Gravida De Taubate",
             "valor": "80"
         },
         {
+            "rank_guild": 7,
+            "nome": "Rents Perecido",
+            "valor": "74"
+        },
+        {
             "rank_guild": 8,
             "nome": "Cyrax Ciborg",
-            "valor": "73"
+            "valor": "74"
         },
         {
             "rank_guild": 9,
-            "nome": "Rents Perecido",
-            "valor": "73"
-        },
-        {
-            "rank_guild": 10,
             "nome": "Asia Jack",
             "valor": "71"
         },
         {
-            "rank_guild": 11,
+            "rank_guild": 10,
             "nome": "Red Hawk",
             "valor": "67"
         }

@@ -1,5 +1,5 @@
 {
-    "timestamp": "2025-11-14 09:18:37",
+    "timestamp": "2025-11-17 08:08:35",
     "skill_name": "Level / Exp",
     "value_type": "Level",
     "ranking": [
@@ -11,32 +11,32 @@
         {
             "rank_guild": 2,
             "nome": "Potasu",
-            "valor": "106"
+            "valor": "107"
         },
         {
             "rank_guild": 3,
             "nome": "Paul Atreidess",
-            "valor": "99"
+            "valor": "100"
         },
         {
             "rank_guild": 4,
             "nome": "Coronel Tiburcio",
-            "valor": "91"
+            "valor": "92"
         },
         {
             "rank_guild": 5,
             "nome": "Luis Espalha Lixo",
-            "valor": "82"
+            "valor": "83"
         },
         {
             "rank_guild": 6,
             "nome": "Holth",
-            "valor": "79"
+            "valor": "81"
         },
         {
             "rank_guild": 7,
             "nome": "Brisolina",
-            "valor": "73"
+            "valor": "75"
         },
         {
             "rank_guild": 8,
@@ -71,7 +71,12 @@
         {
             "rank_guild": 14,
             "nome": "Guineks Pcd",
-            "valor": "57"
+            "valor": "58"
+        },
+        {
+            "rank_guild": 15,
+            "nome": "Caco De Vidro",
+            "valor": "55"
         }
     ]
 }

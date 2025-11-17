@@ -1,5 +1,5 @@
 {
-    "timestamp": "2025-11-14 09:22:05",
+    "timestamp": "2025-11-17 08:12:13",
     "skill_name": "Mage Combat Skills",
     "value_type": "Skill",
     "ranking": [
@@ -30,26 +30,31 @@
         },
         {
             "rank_guild": 6,
+            "nome": "Ze Pafuncho",
+            "valor": "20 (Club)"
+        },
+        {
+            "rank_guild": 7,
             "nome": "Chiconelas",
             "valor": "20 (Axe)"
         },
         {
-            "rank_guild": 7,
+            "rank_guild": 8,
             "nome": "Citoplasma",
             "valor": "19 (Sword)"
         },
         {
-            "rank_guild": 8,
-            "nome": "Ze Pafuncho",
-            "valor": "19 (Club)"
-        },
-        {
             "rank_guild": 9,
-            "nome": "Sir Kustela",
+            "nome": "Vitoria Healer",
             "valor": "19 (Club)"
         },
         {
             "rank_guild": 10,
+            "nome": "Sir Kustela",
+            "valor": "19 (Club)"
+        },
+        {
+            "rank_guild": 11,
             "nome": "Mr Green",
             "valor": "18 (Club)"
         }

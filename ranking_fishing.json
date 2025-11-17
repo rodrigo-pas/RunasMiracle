@@ -1,5 +1,5 @@
 {
-    "timestamp": "2025-11-14 09:20:04",
+    "timestamp": "2025-11-17 08:10:08",
     "skill_name": "Fishing",
     "value_type": "Skill",
     "ranking": [
@@ -11,7 +11,7 @@
         {
             "rank_guild": 2,
             "nome": "Panisset",
-            "valor": "34"
+            "valor": "35"
         },
         {
             "rank_guild": 3,
@@ -25,17 +25,17 @@
         },
         {
             "rank_guild": 5,
-            "nome": "Caco De Vidro",
+            "nome": "The Black Knight",
             "valor": "31"
         },
         {
             "rank_guild": 6,
-            "nome": "Coronel Tiburcio",
+            "nome": "Caco De Vidro",
             "valor": "31"
         },
         {
             "rank_guild": 7,
-            "nome": "The Black Knight",
+            "nome": "Coronel Tiburcio",
             "valor": "31"
         }
     ]

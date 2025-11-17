@@ -1,17 +1,17 @@
 {
-    "timestamp": "2025-11-14 09:18:49",
+    "timestamp": "2025-11-17 08:08:49",
     "skill_name": "Sword",
     "value_type": "Skill",
     "ranking": [
         {
             "rank_guild": 1,
-            "nome": "Umbabarauma Homemgol",
+            "nome": "Potasu",
             "valor": "90"
         },
         {
             "rank_guild": 2,
-            "nome": "Potasu",
-            "valor": "89"
+            "nome": "Umbabarauma Homemgol",
+            "valor": "90"
         },
         {
             "rank_guild": 3,
@@ -46,7 +46,7 @@
         {
             "rank_guild": 9,
             "nome": "Sir Ignorance",
-            "valor": "74"
+            "valor": "75"
         },
         {
             "rank_guild": 10,
