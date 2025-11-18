@@ -1,5 +1,5 @@
 {
-    "timestamp": "2025-11-17 08:12:13",
+    "timestamp": "2025-11-18 14:28:14",
     "skill_name": "Mage Combat Skills",
     "value_type": "Skill",
     "ranking": [
@@ -10,38 +10,38 @@
         },
         {
             "rank_guild": 2,
-            "nome": "Leafar Druidante",
-            "valor": "21 (Club)"
-        },
-        {
-            "rank_guild": 3,
             "nome": "Dalle",
             "valor": "20 (Sword)"
         },
         {
-            "rank_guild": 4,
+            "rank_guild": 3,
             "nome": "Thomas Turbando",
             "valor": "20 (Sword)"
         },
         {
-            "rank_guild": 5,
+            "rank_guild": 4,
             "nome": "Bruxinho",
             "valor": "20 (Club)"
         },
         {
-            "rank_guild": 6,
+            "rank_guild": 5,
             "nome": "Ze Pafuncho",
             "valor": "20 (Club)"
         },
         {
-            "rank_guild": 7,
+            "rank_guild": 6,
             "nome": "Chiconelas",
             "valor": "20 (Axe)"
         },
         {
-            "rank_guild": 8,
+            "rank_guild": 7,
             "nome": "Citoplasma",
             "valor": "19 (Sword)"
+        },
+        {
+            "rank_guild": 8,
+            "nome": "Azeitona",
+            "valor": "19 (Club)"
         },
         {
             "rank_guild": 9,

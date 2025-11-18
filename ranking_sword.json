@@ -1,16 +1,16 @@
 {
-    "timestamp": "2025-11-17 08:08:49",
+    "timestamp": "2025-11-18 14:24:32",
     "skill_name": "Sword",
     "value_type": "Skill",
     "ranking": [
         {
             "rank_guild": 1,
-            "nome": "Potasu",
-            "valor": "90"
+            "nome": "Umbabarauma Homemgol",
+            "valor": "91"
         },
         {
             "rank_guild": 2,
-            "nome": "Umbabarauma Homemgol",
+            "nome": "Potasu",
             "valor": "90"
         },
         {
@@ -25,33 +25,33 @@
         },
         {
             "rank_guild": 5,
+            "nome": "Seu Basilio",
+            "valor": "82"
+        },
+        {
+            "rank_guild": 6,
             "nome": "Luis Espalha Lixo",
             "valor": "81"
         },
         {
-            "rank_guild": 6,
+            "rank_guild": 7,
             "nome": "Rejeitada",
             "valor": "80"
         },
         {
-            "rank_guild": 7,
+            "rank_guild": 8,
+            "nome": "Caco De Vidro",
+            "valor": "78"
+        },
+        {
+            "rank_guild": 9,
             "nome": "Panisset",
             "valor": "77"
         },
         {
-            "rank_guild": 8,
-            "nome": "Caco De Vidro",
-            "valor": "77"
-        },
-        {
-            "rank_guild": 9,
+            "rank_guild": 10,
             "nome": "Sir Ignorance",
             "valor": "75"
-        },
-        {
-            "rank_guild": 10,
-            "nome": "Mercy",
-            "valor": "64"
         }
     ]
 }

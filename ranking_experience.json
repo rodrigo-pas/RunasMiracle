@@ -1,5 +1,5 @@
 {
-    "timestamp": "2025-11-17 08:08:35",
+    "timestamp": "2025-11-18 14:24:15",
     "skill_name": "Level / Exp",
     "value_type": "Level",
     "ranking": [
@@ -16,12 +16,12 @@
         {
             "rank_guild": 3,
             "nome": "Paul Atreidess",
-            "valor": "100"
+            "valor": "101"
         },
         {
             "rank_guild": 4,
             "nome": "Coronel Tiburcio",
-            "valor": "92"
+            "valor": "93"
         },
         {
             "rank_guild": 5,
@@ -31,12 +31,12 @@
         {
             "rank_guild": 6,
             "nome": "Holth",
-            "valor": "81"
+            "valor": "82"
         },
         {
             "rank_guild": 7,
             "nome": "Brisolina",
-            "valor": "75"
+            "valor": "76"
         },
         {
             "rank_guild": 8,
@@ -45,38 +45,38 @@
         },
         {
             "rank_guild": 9,
+            "nome": "Seu Basilio",
+            "valor": "70"
+        },
+        {
+            "rank_guild": 10,
             "nome": "Rejeitada",
             "valor": "66"
         },
         {
-            "rank_guild": 10,
+            "rank_guild": 11,
             "nome": "Charlie Nelson",
             "valor": "66"
         },
         {
-            "rank_guild": 11,
+            "rank_guild": 12,
             "nome": "Lievore",
             "valor": "62"
         },
         {
-            "rank_guild": 12,
+            "rank_guild": 13,
             "nome": "Thomas Turbando",
             "valor": "61"
         },
         {
-            "rank_guild": 13,
+            "rank_guild": 14,
             "nome": "Gravida De Taubate",
             "valor": "59"
         },
         {
-            "rank_guild": 14,
+            "rank_guild": 15,
             "nome": "Guineks Pcd",
             "valor": "58"
-        },
-        {
-            "rank_guild": 15,
-            "nome": "Caco De Vidro",
-            "valor": "55"
         }
     ]
 }

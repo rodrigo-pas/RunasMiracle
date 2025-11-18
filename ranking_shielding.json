@@ -1,5 +1,5 @@
 {
-    "timestamp": "2025-11-17 08:09:54",
+    "timestamp": "2025-11-18 14:25:45",
     "skill_name": "Shielding",
     "value_type": "Skill",
     "ranking": [
@@ -30,68 +30,78 @@
         },
         {
             "rank_guild": 6,
+            "nome": "Seu Basilio",
+            "valor": "79"
+        },
+        {
+            "rank_guild": 7,
             "nome": "Drady Legend",
             "valor": "77"
         },
         {
-            "rank_guild": 7,
+            "rank_guild": 8,
             "nome": "Sr Milagre",
             "valor": "76"
         },
         {
-            "rank_guild": 8,
+            "rank_guild": 9,
             "nome": "Holth",
             "valor": "76"
         },
         {
-            "rank_guild": 9,
-            "nome": "Panisset",
-            "valor": "75"
-        },
-        {
             "rank_guild": 10,
-            "nome": "Miu Miu",
-            "valor": "75"
-        },
-        {
-            "rank_guild": 11,
             "nome": "Luis Espalha Lixo",
             "valor": "75"
         },
         {
+            "rank_guild": 11,
+            "nome": "Panisset",
+            "valor": "75"
+        },
+        {
             "rank_guild": 12,
+            "nome": "Miu Miu",
+            "valor": "75"
+        },
+        {
+            "rank_guild": 13,
             "nome": "Caco De Vidro",
             "valor": "74"
         },
         {
-            "rank_guild": 13,
+            "rank_guild": 14,
             "nome": "Rejeitada",
             "valor": "72"
         },
         {
-            "rank_guild": 14,
-            "nome": "Lievore",
-            "valor": "70"
-        },
-        {
             "rank_guild": 15,
-            "nome": "Sir Ignorance",
+            "nome": "Charlie Nelson",
             "valor": "70"
         },
         {
             "rank_guild": 16,
-            "nome": "Paul Atreidess",
-            "valor": "69"
+            "nome": "Sir Ignorance",
+            "valor": "70"
         },
         {
             "rank_guild": 17,
             "nome": "Guineks Pcd",
-            "valor": "69"
+            "valor": "70"
         },
         {
             "rank_guild": 18,
-            "nome": "Charlie Nelson",
-            "valor": "68"
+            "nome": "Lievore",
+            "valor": "70"
+        },
+        {
+            "rank_guild": 19,
+            "nome": "Paul Atreidess",
+            "valor": "69"
+        },
+        {
+            "rank_guild": 20,
+            "nome": "Marola Games",
+            "valor": "67"
         }
     ]
 }
