@@ -1,5 +1,5 @@
 {
-    "timestamp": "2025-11-18 14:24:46",
+    "timestamp": "2025-11-19 07:19:04",
     "skill_name": "Axe",
     "value_type": "Skill",
     "ranking": [
@@ -36,7 +36,7 @@
         {
             "rank_guild": 7,
             "nome": "Eden",
-            "valor": "63"
+            "valor": "65"
         }
     ]
 }

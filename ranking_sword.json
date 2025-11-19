@@ -1,5 +1,5 @@
 {
-    "timestamp": "2025-11-18 14:24:32",
+    "timestamp": "2025-11-19 07:18:51",
     "skill_name": "Sword",
     "value_type": "Skill",
     "ranking": [
@@ -21,7 +21,7 @@
         {
             "rank_guild": 4,
             "nome": "Coronel Tiburcio",
-            "valor": "82"
+            "valor": "83"
         },
         {
             "rank_guild": 5,
@@ -40,16 +40,11 @@
         },
         {
             "rank_guild": 8,
-            "nome": "Caco De Vidro",
+            "nome": "Panisset",
             "valor": "78"
         },
         {
             "rank_guild": 9,
-            "nome": "Panisset",
-            "valor": "77"
-        },
-        {
-            "rank_guild": 10,
             "nome": "Sir Ignorance",
             "valor": "75"
         }

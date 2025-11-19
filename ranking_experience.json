@@ -1,5 +1,5 @@
 {
-    "timestamp": "2025-11-18 14:24:15",
+    "timestamp": "2025-11-19 07:18:38",
     "skill_name": "Level / Exp",
     "value_type": "Level",
     "ranking": [
@@ -25,13 +25,13 @@
         },
         {
             "rank_guild": 5,
-            "nome": "Luis Espalha Lixo",
+            "nome": "Holth",
             "valor": "83"
         },
         {
             "rank_guild": 6,
-            "nome": "Holth",
-            "valor": "82"
+            "nome": "Luis Espalha Lixo",
+            "valor": "83"
         },
         {
             "rank_guild": 7,
@@ -61,7 +61,7 @@
         {
             "rank_guild": 12,
             "nome": "Lievore",
-            "valor": "62"
+            "valor": "63"
         },
         {
             "rank_guild": 13,
@@ -70,11 +70,6 @@
         },
         {
             "rank_guild": 14,
-            "nome": "Gravida De Taubate",
-            "valor": "59"
-        },
-        {
-            "rank_guild": 15,
             "nome": "Guineks Pcd",
             "valor": "58"
         }
