@@ -1,5 +1,5 @@
 {
-    "timestamp": "2025-11-19 07:19:16",
+    "timestamp": "2025-11-25 09:12:39",
     "skill_name": "Club",
     "value_type": "Skill",
     "ranking": [
@@ -10,13 +10,13 @@
         },
         {
             "rank_guild": 2,
-            "nome": "Paul Atreidess",
+            "nome": "Charlie Nelson",
             "valor": "80"
         },
         {
             "rank_guild": 3,
-            "nome": "Charlie Nelson",
-            "valor": "77"
+            "nome": "Paul Atreidess",
+            "valor": "80"
         },
         {
             "rank_guild": 4,

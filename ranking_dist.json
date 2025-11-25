@@ -1,5 +1,5 @@
 {
-    "timestamp": "2025-11-19 07:19:30",
+    "timestamp": "2025-11-25 09:12:52",
     "skill_name": "Distance",
     "value_type": "Skill",
     "ranking": [
@@ -10,18 +10,18 @@
         },
         {
             "rank_guild": 2,
-            "nome": "Lievore",
-            "valor": "89"
+            "nome": "Guineks Pcd",
+            "valor": "90"
         },
         {
             "rank_guild": 3,
-            "nome": "Guineks Pcd",
+            "nome": "Lievore",
             "valor": "89"
         },
         {
             "rank_guild": 4,
             "nome": "Brisolina",
-            "valor": "85"
+            "valor": "86"
         },
         {
             "rank_guild": 5,
@@ -36,7 +36,7 @@
         {
             "rank_guild": 7,
             "nome": "Cyrax Ciborg",
-            "valor": "75"
+            "valor": "76"
         },
         {
             "rank_guild": 8,
@@ -51,7 +51,7 @@
         {
             "rank_guild": 10,
             "nome": "Red Hawk",
-            "valor": "67"
+            "valor": "71"
         }
     ]
 }

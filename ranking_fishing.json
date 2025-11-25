@@ -1,5 +1,5 @@
 {
-    "timestamp": "2025-11-19 07:20:06",
+    "timestamp": "2025-11-25 09:13:35",
     "skill_name": "Fishing",
     "value_type": "Skill",
     "ranking": [
@@ -11,7 +11,7 @@
         {
             "rank_guild": 2,
             "nome": "Panisset",
-            "valor": "35"
+            "valor": "36"
         },
         {
             "rank_guild": 3,

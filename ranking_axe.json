@@ -1,5 +1,5 @@
 {
-    "timestamp": "2025-11-19 07:19:04",
+    "timestamp": "2025-11-25 09:12:27",
     "skill_name": "Axe",
     "value_type": "Skill",
     "ranking": [
@@ -16,12 +16,12 @@
         {
             "rank_guild": 3,
             "nome": "Holth",
-            "valor": "81"
+            "valor": "82"
         },
         {
             "rank_guild": 4,
             "nome": "Miu Miu",
-            "valor": "77"
+            "valor": "78"
         },
         {
             "rank_guild": 5,
@@ -31,12 +31,12 @@
         {
             "rank_guild": 6,
             "nome": "Paul Atreidess",
-            "valor": "68"
+            "valor": "69"
         },
         {
             "rank_guild": 7,
             "nome": "Eden",
-            "valor": "65"
+            "valor": "66"
         }
     ]
 }

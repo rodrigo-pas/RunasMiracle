@@ -1,5 +1,5 @@
 {
-    "timestamp": "2025-11-19 07:18:51",
+    "timestamp": "2025-11-25 09:12:14",
     "skill_name": "Sword",
     "value_type": "Skill",
     "ranking": [
@@ -15,18 +15,18 @@
         },
         {
             "rank_guild": 3,
-            "nome": "Sr Milagre",
+            "nome": "Seu Basilio",
             "valor": "85"
         },
         {
             "rank_guild": 4,
-            "nome": "Coronel Tiburcio",
-            "valor": "83"
+            "nome": "Sr Milagre",
+            "valor": "85"
         },
         {
             "rank_guild": 5,
-            "nome": "Seu Basilio",
-            "valor": "82"
+            "nome": "Coronel Tiburcio",
+            "valor": "83"
         },
         {
             "rank_guild": 6,
@@ -41,7 +41,7 @@
         {
             "rank_guild": 8,
             "nome": "Panisset",
-            "valor": "78"
+            "valor": "79"
         },
         {
             "rank_guild": 9,

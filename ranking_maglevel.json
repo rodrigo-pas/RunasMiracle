@@ -1,5 +1,5 @@
 {
-    "timestamp": "2025-11-19 07:19:42",
+    "timestamp": "2025-11-25 09:13:07",
     "skill_name": "Magic Level",
     "value_type": "Skill",
     "ranking": [
@@ -16,22 +16,27 @@
         {
             "rank_guild": 3,
             "nome": "Dalle",
-            "valor": "55"
+            "valor": "56"
         },
         {
             "rank_guild": 4,
-            "nome": "Thomas Turbando",
-            "valor": "54"
+            "nome": "Sir Kustela",
+            "valor": "55"
         },
         {
             "rank_guild": 5,
             "nome": "Bruxinho",
-            "valor": "54"
+            "valor": "55"
         },
         {
             "rank_guild": 6,
-            "nome": "Sir Kustela",
+            "nome": "Thomas Turbando",
             "valor": "54"
+        },
+        {
+            "rank_guild": 7,
+            "nome": "Azeitona",
+            "valor": "51"
         }
     ]
 }

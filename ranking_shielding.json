@@ -1,5 +1,5 @@
 {
-    "timestamp": "2025-11-19 07:19:55",
+    "timestamp": "2025-11-25 09:13:21",
     "skill_name": "Shielding",
     "value_type": "Skill",
     "ranking": [
@@ -11,12 +11,12 @@
         {
             "rank_guild": 2,
             "nome": "Umbabarauma Homemgol",
-            "valor": "87"
+            "valor": "88"
         },
         {
             "rank_guild": 3,
-            "nome": "Coronel Tiburcio",
-            "valor": "80"
+            "nome": "Seu Basilio",
+            "valor": "82"
         },
         {
             "rank_guild": 4,
@@ -25,58 +25,58 @@
         },
         {
             "rank_guild": 5,
+            "nome": "Coronel Tiburcio",
+            "valor": "80"
+        },
+        {
+            "rank_guild": 6,
             "nome": "Muxixe",
             "valor": "79"
         },
         {
-            "rank_guild": 6,
-            "nome": "Seu Basilio",
-            "valor": "79"
-        },
-        {
             "rank_guild": 7,
-            "nome": "Drady Legend",
+            "nome": "Panisset",
             "valor": "77"
         },
         {
             "rank_guild": 8,
-            "nome": "Holth",
-            "valor": "76"
+            "nome": "Drady Legend",
+            "valor": "77"
         },
         {
             "rank_guild": 9,
-            "nome": "Panisset",
-            "valor": "76"
+            "nome": "Holth",
+            "valor": "77"
         },
         {
             "rank_guild": 10,
-            "nome": "Miu Miu",
-            "valor": "76"
-        },
-        {
-            "rank_guild": 11,
             "nome": "Sr Milagre",
             "valor": "76"
         },
         {
+            "rank_guild": 11,
+            "nome": "Miu Miu",
+            "valor": "76"
+        },
+        {
             "rank_guild": 12,
-            "nome": "Luis Espalha Lixo",
+            "nome": "Charlie Nelson",
             "valor": "75"
         },
         {
             "rank_guild": 13,
-            "nome": "Rejeitada",
-            "valor": "72"
+            "nome": "Luis Espalha Lixo",
+            "valor": "75"
         },
         {
             "rank_guild": 14,
-            "nome": "Charlie Nelson",
-            "valor": "71"
+            "nome": "Guineks Pcd",
+            "valor": "73"
         },
         {
             "rank_guild": 15,
-            "nome": "Guineks Pcd",
-            "valor": "71"
+            "nome": "Rejeitada",
+            "valor": "72"
         },
         {
             "rank_guild": 16,
@@ -85,18 +85,13 @@
         },
         {
             "rank_guild": 17,
-            "nome": "Sir Ignorance",
+            "nome": "Paul Atreidess",
             "valor": "70"
         },
         {
             "rank_guild": 18,
-            "nome": "Paul Atreidess",
-            "valor": "69"
-        },
-        {
-            "rank_guild": 19,
-            "nome": "Marola Games",
-            "valor": "67"
+            "nome": "Sir Ignorance",
+            "valor": "70"
         }
     ]
 }
