@@ -1,5 +1,5 @@
 {
-    "timestamp": "2025-11-25 09:15:42",
+    "timestamp": "2025-11-28 14:59:59",
     "skill_name": "Mage Combat Skills",
     "value_type": "Skill",
     "ranking": [
@@ -10,18 +10,18 @@
         },
         {
             "rank_guild": 2,
+            "nome": "Bruxinho",
+            "valor": "21 (Club)"
+        },
+        {
+            "rank_guild": 3,
             "nome": "Dalle",
             "valor": "20 (Sword)"
         },
         {
-            "rank_guild": 3,
+            "rank_guild": 4,
             "nome": "Thomas Turbando",
             "valor": "20 (Sword)"
-        },
-        {
-            "rank_guild": 4,
-            "nome": "Bruxinho",
-            "valor": "20 (Club)"
         },
         {
             "rank_guild": 5,

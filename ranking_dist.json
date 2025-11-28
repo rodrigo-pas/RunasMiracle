@@ -1,55 +1,60 @@
 {
-    "timestamp": "2025-11-25 09:12:52",
+    "timestamp": "2025-11-28 14:57:12",
     "skill_name": "Distance",
     "value_type": "Skill",
     "ranking": [
         {
             "rank_guild": 1,
-            "nome": "Drady Legend",
-            "valor": "91"
+            "nome": "Indiana Jones",
+            "valor": "94"
         },
         {
             "rank_guild": 2,
             "nome": "Guineks Pcd",
-            "valor": "90"
+            "valor": "91"
         },
         {
             "rank_guild": 3,
+            "nome": "Drady Legend",
+            "valor": "91"
+        },
+        {
+            "rank_guild": 4,
             "nome": "Lievore",
             "valor": "89"
         },
         {
-            "rank_guild": 4,
+            "rank_guild": 5,
             "nome": "Brisolina",
             "valor": "86"
         },
         {
-            "rank_guild": 5,
+            "rank_guild": 6,
             "nome": "Treep",
             "valor": "81"
         },
         {
-            "rank_guild": 6,
+            "rank_guild": 7,
             "nome": "Sabhugo",
-            "valor": "80"
+            "valor": "81"
         },
         {
-            "rank_guild": 7,
+            "rank_guild": 8,
             "nome": "Cyrax Ciborg",
             "valor": "76"
         },
         {
-            "rank_guild": 8,
+            "rank_guild": 9,
             "nome": "Rents Perecido",
-            "valor": "74"
+            "valor": "75"
         },
         {
-            "rank_guild": 9,
+            "rank_guild": 10,
             "nome": "Asia Jack",
             "valor": "71"
         },
         {
-            "rank_guild": 10,
+            "rank_guild": 11,
             "nome": "Red Hawk",
             "valor": "71"
         }

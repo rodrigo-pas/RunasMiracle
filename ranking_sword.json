@@ -1,12 +1,12 @@
 {
-    "timestamp": "2025-11-25 09:12:14",
+    "timestamp": "2025-11-28 14:56:32",
     "skill_name": "Sword",
     "value_type": "Skill",
     "ranking": [
         {
             "rank_guild": 1,
             "nome": "Umbabarauma Homemgol",
-            "valor": "91"
+            "valor": "92"
         },
         {
             "rank_guild": 2,
@@ -16,7 +16,7 @@
         {
             "rank_guild": 3,
             "nome": "Seu Basilio",
-            "valor": "85"
+            "valor": "86"
         },
         {
             "rank_guild": 4,
@@ -35,13 +35,13 @@
         },
         {
             "rank_guild": 7,
-            "nome": "Rejeitada",
+            "nome": "Panisset",
             "valor": "80"
         },
         {
             "rank_guild": 8,
-            "nome": "Panisset",
-            "valor": "79"
+            "nome": "Rejeitada",
+            "valor": "80"
         },
         {
             "rank_guild": 9,

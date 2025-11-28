@@ -1,5 +1,5 @@
 {
-    "timestamp": "2025-11-25 09:13:21",
+    "timestamp": "2025-11-28 14:57:39",
     "skill_name": "Shielding",
     "value_type": "Skill",
     "ranking": [
@@ -16,7 +16,7 @@
         {
             "rank_guild": 3,
             "nome": "Seu Basilio",
-            "valor": "82"
+            "valor": "83"
         },
         {
             "rank_guild": 4,
@@ -36,42 +36,42 @@
         {
             "rank_guild": 7,
             "nome": "Panisset",
-            "valor": "77"
+            "valor": "78"
         },
         {
             "rank_guild": 8,
-            "nome": "Drady Legend",
-            "valor": "77"
-        },
-        {
-            "rank_guild": 9,
             "nome": "Holth",
             "valor": "77"
         },
         {
-            "rank_guild": 10,
-            "nome": "Sr Milagre",
-            "valor": "76"
+            "rank_guild": 9,
+            "nome": "Drady Legend",
+            "valor": "77"
         },
         {
-            "rank_guild": 11,
+            "rank_guild": 10,
             "nome": "Miu Miu",
             "valor": "76"
         },
         {
+            "rank_guild": 11,
+            "nome": "Sr Milagre",
+            "valor": "76"
+        },
+        {
             "rank_guild": 12,
-            "nome": "Charlie Nelson",
+            "nome": "Luis Espalha Lixo",
             "valor": "75"
         },
         {
             "rank_guild": 13,
-            "nome": "Luis Espalha Lixo",
+            "nome": "Charlie Nelson",
             "valor": "75"
         },
         {
             "rank_guild": 14,
             "nome": "Guineks Pcd",
-            "valor": "73"
+            "valor": "75"
         },
         {
             "rank_guild": 15,
@@ -81,7 +81,7 @@
         {
             "rank_guild": 16,
             "nome": "Lievore",
-            "valor": "70"
+            "valor": "71"
         },
         {
             "rank_guild": 17,
@@ -92,6 +92,11 @@
             "rank_guild": 18,
             "nome": "Sir Ignorance",
             "valor": "70"
+        },
+        {
+            "rank_guild": 19,
+            "nome": "Marola Games",
+            "valor": "67"
         }
     ]
 }

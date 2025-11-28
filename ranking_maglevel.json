@@ -1,5 +1,5 @@
 {
-    "timestamp": "2025-11-25 09:13:07",
+    "timestamp": "2025-11-28 14:57:26",
     "skill_name": "Magic Level",
     "value_type": "Skill",
     "ranking": [
@@ -20,12 +20,12 @@
         },
         {
             "rank_guild": 4,
-            "nome": "Sir Kustela",
+            "nome": "Bruxinho",
             "valor": "55"
         },
         {
             "rank_guild": 5,
-            "nome": "Bruxinho",
+            "nome": "Sir Kustela",
             "valor": "55"
         },
         {

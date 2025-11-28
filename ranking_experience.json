@@ -1,5 +1,5 @@
 {
-    "timestamp": "2025-11-25 09:12:00",
+    "timestamp": "2025-11-28 14:56:18",
     "skill_name": "Level / Exp",
     "value_type": "Level",
     "ranking": [
@@ -11,65 +11,70 @@
         {
             "rank_guild": 2,
             "nome": "Potasu",
-            "valor": "108"
+            "valor": "109"
         },
         {
             "rank_guild": 3,
             "nome": "Paul Atreidess",
-            "valor": "102"
+            "valor": "104"
         },
         {
             "rank_guild": 4,
             "nome": "Coronel Tiburcio",
-            "valor": "96"
+            "valor": "98"
         },
         {
             "rank_guild": 5,
-            "nome": "Holth",
-            "valor": "89"
+            "nome": "Indiana Jones",
+            "valor": "94"
         },
         {
             "rank_guild": 6,
+            "nome": "Holth",
+            "valor": "91"
+        },
+        {
+            "rank_guild": 7,
             "nome": "Luis Espalha Lixo",
             "valor": "84"
         },
         {
-            "rank_guild": 7,
+            "rank_guild": 8,
             "nome": "Brisolina",
-            "valor": "78"
+            "valor": "80"
         },
         {
-            "rank_guild": 8,
+            "rank_guild": 9,
+            "nome": "Charlie Nelson",
+            "valor": "72"
+        },
+        {
+            "rank_guild": 10,
             "nome": "Muxixe",
             "valor": "70"
         },
         {
-            "rank_guild": 9,
+            "rank_guild": 11,
             "nome": "Seu Basilio",
             "valor": "70"
         },
         {
-            "rank_guild": 10,
-            "nome": "Charlie Nelson",
-            "valor": "68"
-        },
-        {
-            "rank_guild": 11,
+            "rank_guild": 12,
             "nome": "Rejeitada",
             "valor": "66"
         },
         {
-            "rank_guild": 12,
+            "rank_guild": 13,
             "nome": "Lievore",
             "valor": "64"
         },
         {
-            "rank_guild": 13,
+            "rank_guild": 14,
             "nome": "Thomas Turbando",
             "valor": "62"
         },
         {
-            "rank_guild": 14,
+            "rank_guild": 15,
             "nome": "Guineks Pcd",
             "valor": "60"
         }
