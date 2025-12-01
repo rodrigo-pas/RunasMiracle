@@ -1,17 +1,17 @@
 {
-    "timestamp": "2025-11-28 14:57:26",
+    "timestamp": "2025-12-01 08:36:10",
     "skill_name": "Magic Level",
     "value_type": "Skill",
     "ranking": [
         {
             "rank_guild": 1,
-            "nome": "Tupi-guarani",
+            "nome": "Citoplasma",
             "valor": "59"
         },
         {
             "rank_guild": 2,
-            "nome": "Citoplasma",
-            "valor": "58"
+            "nome": "Tupi-guarani",
+            "valor": "59"
         },
         {
             "rank_guild": 3,
@@ -20,12 +20,12 @@
         },
         {
             "rank_guild": 4,
-            "nome": "Bruxinho",
-            "valor": "55"
+            "nome": "Sir Kustela",
+            "valor": "56"
         },
         {
             "rank_guild": 5,
-            "nome": "Sir Kustela",
+            "nome": "Bruxinho",
             "valor": "55"
         },
         {
@@ -36,7 +36,7 @@
         {
             "rank_guild": 7,
             "nome": "Azeitona",
-            "valor": "51"
+            "valor": "52"
         }
     ]
 }

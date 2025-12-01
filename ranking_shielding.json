@@ -1,5 +1,5 @@
 {
-    "timestamp": "2025-11-28 14:57:39",
+    "timestamp": "2025-12-01 08:36:23",
     "skill_name": "Shielding",
     "value_type": "Skill",
     "ranking": [
@@ -11,12 +11,12 @@
         {
             "rank_guild": 2,
             "nome": "Umbabarauma Homemgol",
-            "valor": "88"
+            "valor": "89"
         },
         {
             "rank_guild": 3,
             "nome": "Seu Basilio",
-            "valor": "83"
+            "valor": "84"
         },
         {
             "rank_guild": 4,
@@ -30,13 +30,13 @@
         },
         {
             "rank_guild": 6,
-            "nome": "Muxixe",
+            "nome": "Panisset",
             "valor": "79"
         },
         {
             "rank_guild": 7,
-            "nome": "Panisset",
-            "valor": "78"
+            "nome": "Muxixe",
+            "valor": "79"
         },
         {
             "rank_guild": 8,
@@ -50,12 +50,12 @@
         },
         {
             "rank_guild": 10,
-            "nome": "Miu Miu",
+            "nome": "Sr Milagre",
             "valor": "76"
         },
         {
             "rank_guild": 11,
-            "nome": "Sr Milagre",
+            "nome": "Miu Miu",
             "valor": "76"
         },
         {
@@ -86,7 +86,7 @@
         {
             "rank_guild": 17,
             "nome": "Paul Atreidess",
-            "valor": "70"
+            "valor": "71"
         },
         {
             "rank_guild": 18,

@@ -1,5 +1,5 @@
 {
-    "timestamp": "2025-11-28 14:56:45",
+    "timestamp": "2025-12-01 08:35:29",
     "skill_name": "Axe",
     "value_type": "Skill",
     "ranking": [
@@ -31,12 +31,12 @@
         {
             "rank_guild": 6,
             "nome": "Paul Atreidess",
-            "valor": "70"
+            "valor": "71"
         },
         {
             "rank_guild": 7,
             "nome": "Eden",
-            "valor": "66"
+            "valor": "67"
         }
     ]
 }

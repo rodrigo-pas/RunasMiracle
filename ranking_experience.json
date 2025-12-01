@@ -1,5 +1,5 @@
 {
-    "timestamp": "2025-11-28 14:56:18",
+    "timestamp": "2025-12-01 08:35:02",
     "skill_name": "Level / Exp",
     "value_type": "Level",
     "ranking": [
@@ -11,17 +11,17 @@
         {
             "rank_guild": 2,
             "nome": "Potasu",
-            "valor": "109"
+            "valor": "110"
         },
         {
             "rank_guild": 3,
             "nome": "Paul Atreidess",
-            "valor": "104"
+            "valor": "105"
         },
         {
             "rank_guild": 4,
             "nome": "Coronel Tiburcio",
-            "valor": "98"
+            "valor": "99"
         },
         {
             "rank_guild": 5,
@@ -41,12 +41,12 @@
         {
             "rank_guild": 8,
             "nome": "Brisolina",
-            "valor": "80"
+            "valor": "81"
         },
         {
             "rank_guild": 9,
             "nome": "Charlie Nelson",
-            "valor": "72"
+            "valor": "73"
         },
         {
             "rank_guild": 10,
@@ -71,7 +71,7 @@
         {
             "rank_guild": 14,
             "nome": "Thomas Turbando",
-            "valor": "62"
+            "valor": "63"
         },
         {
             "rank_guild": 15,
