@@ -29,6 +29,8 @@ jobs:
 
       - name: Executar script
         run: python generate_rankings.py
+        env:
+          SCRAPERAPI_KEY: ${{ secrets.SCRAPERAPI_KEY }}
 
       # Evita erro de "non-fast-forward"
       - name: Atualizar branch antes do commit
