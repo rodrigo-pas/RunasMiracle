@@ -1,5 +1,5 @@
 {
-    "timestamp": "2025-12-02 09:21:46",
+    "timestamp": "2025-12-02 09:31:52",
     "skill_name": "Axe",
     "value_type": "Skill",
     "ranking": [
@@ -10,12 +10,12 @@
         },
         {
             "rank_guild": 2,
-            "nome": "Holth",
+            "nome": "Muxixe",
             "valor": "82"
         },
         {
             "rank_guild": 3,
-            "nome": "Muxixe",
+            "nome": "Holth",
             "valor": "82"
         },
         {
