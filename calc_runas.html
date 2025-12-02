@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Runas</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="nav.css">
+</head>
+<body>
+    
+    <div class="header-titulo">
+        <img src="guild_image.png" alt="Emblema" class="emblema">
+        <h2 class="titulo-analyser">Inimigos do Analyser</h2>
+        <img src="guild_image.png" alt="Emblema" class="emblema">
+    </div>
+
+    <nav class="main-nav">
+        <a href="index.html">HOME</a> <a href="calc_runas.html" class="nav-active">CALCULADORA DE RUNAS</a> <a href="ranking.html">RANKING GUILDA</a>
+    </nav>
+    
+    <div class="container">
+        <h1>Calculadora de Runas</h1>
+        
+        <div class="selectors"> 
+            
+            <div class="selector-group">
+                <label for="runa">Escolha a runa:</label>
+                <select id="runa" onchange="atualizarRuna()">
+                </select>
+            </div>
+
+            <div class="selector-group">
+                <label for="vocacao">Escolha a vocação:</label>
+                <select id="vocacao" onchange="calcularTempo()"></select>
+            </div>
+            
+        </div>
+        
+        <div class="regen-boosts-container"> 
+            <div class="regen-boosts">
+                <p class="boosts-title">Regen Extra:</p>
+                
+                <label>
+                    <input type="checkbox" id="giantSaphire" onchange="calcularTempo()">
+                    Giant Saphire (+1 mana/3s)
+                </label>
+                
+                <label>
+                    <input type="checkbox" id="lifeRing" name="regenRing" onchange="handleRingExclusivity('lifeRing')"> Life Ring (+1 mana/3s)
+                </label>
+                
+                <label>
+                    <input type="checkbox" id="ringOfHealing" name="regenRing" onchange="handleRingExclusivity('ringOfHealing')"> Ring of Healing (+1 mana/1s)
+                </label>
+            </div>
+        </div>
+        <div class="resultado">
+            <img id="runaImg" src="hmm.gif" alt="Runa" class="runa-img">
+            
+            <p id="tempoRuna">Tempo para 1 runa: --</p>
+            <p id="tempoBP">Tempo para 1 backpack: --</p>
+            
+            <div class="food-area">
+                <label for="food">Escolha a food:</label>
+                <select id="food" onchange="calcularTempo()">
+                </select>
+
+                <p id="foodBP_title" class="food-title">Foods necessárias para 1 BP:</p>
+                
+                <div class="food-result">
+                    <img id="foodImg" src="" alt="Food" class="food-img" style="display:none;">
+                    <p id="foodBP_quantity" class="food-text">--</p>
+                </div>
+                
+                <div class="regen-results-area">
+                    <p id="saphire-info">Giant Saphire: --</p>
+                    <p id="ring-info">Ring: --</p>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+    <footer class="rodape-bydrak">
+        Site feito pelo Bydrak &reg;
+    </footer>
+    
+</body>
+</html>
