@@ -2,12 +2,12 @@ import json
 import requests
 from bs4 import BeautifulSoup
 from time import sleep
-from datetime import datetime
 
 # -------------------------------------------------
-# CONFIGURAÇÃO
+# CONFIGURAÇÃO (SOMENTE SCRAPERAPI)
 # -------------------------------------------------
 SCRAPERAPI_KEY = "S6b64b53de23174761e9ab2bd5c8d80c7"
+
 GUILD_URL = "https://miracle74.com/?subtopic=guilds&action=show&guild=600"
 BASE_URL = "https://miracle74.com/?subtopic=highscores"
 
@@ -16,17 +16,17 @@ HEADERS = {
 }
 
 # -------------------------------------------------
-# FUNÇÃO SAFE_GET COM SCRAPERAPI
+# SAFE_GET — AGORA SÓ SCRAPERAPI (SEM SCRAPENINJA)
 # -------------------------------------------------
-def safe_get(url):
-    """Faz GET usando ScraperAPI para evitar erros 403/429."""
+def safe_get(url: str):
     api_url = f"http://api.scraperapi.com/?api_key={SCRAPERAPI_KEY}&url={url}"
 
     for attempt in range(1, 4):
         try:
-            resp = requests.get(api_url, timeout=60)
+            resp = requests.get(api_url, headers=HEADERS, timeout=60)
             resp.raise_for_status()
             return resp.text
+
         except Exception as e:
             print(f"Tentativa {attempt}/3 falhou: {e}")
             sleep(2 * attempt)
@@ -44,13 +44,14 @@ def _get_names_from_guild_url(url):
         return []
 
     soup = BeautifulSoup(html, "html.parser")
+
     table = soup.find("table", {"class": "table table-striped"})
     if not table:
         print("ERRO: Nenhuma tabela encontrada. HTML mudou?")
         return []
 
     members = []
-    rows = table.find_all("tr")[1:]  # pula cabeçalho
+    rows = table.find_all("tr")[1:]  # pula o cabeçalho
 
     for row in rows:
         cols = row.find_all("td")
@@ -61,13 +62,12 @@ def _get_names_from_guild_url(url):
     return members
 
 # -------------------------------------------------
-# BUSCAR HIGHSCORE PARA UM TIPO
+# BUSCAR DADOS DO HIGHSCORE
 # -------------------------------------------------
 def _scrape_highscores_page(skill_id):
-    """Retorna lista de tuplas (nome, valor)."""
     url = f"{BASE_URL}&list={skill_id}"
-
     html = safe_get(url)
+
     if not html:
         print(f"ERRO na página highscores list={skill_id}")
         return None
@@ -86,9 +86,9 @@ def _scrape_highscores_page(skill_id):
         cols = row.find_all("td")
         if len(cols) >= 3:
             name = cols[1].text.strip()
-            value_raw = cols[2].text.strip().replace(",", "")
+            raw_value = cols[2].text.strip().replace(",", "")
             try:
-                value = int(value_raw)
+                value = int(raw_value)
             except:
                 value = 0
             data.append((name, value))
@@ -96,10 +96,10 @@ def _scrape_highscores_page(skill_id):
     return data
 
 # -------------------------------------------------
-# GERA RANKING PARA UMA SKILL
+# GERAR RANKING INDIVIDUAL
 # -------------------------------------------------
-def generate_ranking(skill_name, skill_id, all_members):
-    print(f"----------------------------------------")
+def generate_ranking(skill_name, skill_id, members):
+    print("----------------------------------------")
     print(f"Processando: {skill_name}")
 
     scraped = _scrape_highscores_page(skill_id)
@@ -107,17 +107,19 @@ def generate_ranking(skill_name, skill_id, all_members):
         print(f"ERRO ao obter highscores de {skill_name}")
         return
 
-    filtered = [(name, value) for name, value in scraped if name in all_members]
+    # filtrar somente membros da guild
+    filtered = [(name, value) for name, value in scraped if name in members]
 
-    # ORDEM CORRETA:
-    #  1) maior valor primeiro
-    #  2) empate → ordem alfabética crescente
+    # ordenar corretamente
     filtered.sort(key=lambda x: (-x[1], x[0].lower()))
 
-    output = [{"rank": i + 1, "name": n, "value": v} for i, (n, v) in enumerate(filtered)]
+    # adicionar ranks
+    output = [
+        {"rank": i + 1, "name": n, "value": v}
+        for i, (n, v) in enumerate(filtered)
+    ]
 
     filename = f"ranking_{skill_name.lower().replace(' ', '_')}.json"
-
     with open(filename, "w", encoding="utf-8") as f:
         json.dump(output, f, indent=4, ensure_ascii=False)
 
@@ -138,7 +140,7 @@ def main():
 
     print(f"{len(members)} membros encontrados.")
 
-    tasks = [
+    skills = [
         ("experience", 0),
         ("sword", 1),
         ("axe", 2),
@@ -151,7 +153,7 @@ def main():
         ("mage_defense", 9)
     ]
 
-    for skill_name, skill_id in tasks:
+    for skill_name, skill_id in skills:
         generate_ranking(skill_name, skill_id, members)
 
     print("Finalizado todos os rankings.")
