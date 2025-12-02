@@ -6,6 +6,17 @@ from time import sleep
 import sys 
 import re 
 
+session = requests.Session()
+session.headers.update({
+    "User-Agent": (
+        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
+        "AppleWebKit/537.36 (KHTML, like Gecko) "
+        "Chrome/123.0.0.0 Safari/537.36"
+    ),
+    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+    "Accept-Language": "en-US,en;q=0.9",
+})
+
 # ===============================================
 # CONFIGURAÇÕES GLOBAIS
 # ===============================================
@@ -26,8 +37,6 @@ SKILLS = {
     'mage_defense': 'Mage Defense Skills', 
 }
 
-HEADERS = {'User-Agent': 'Mozilla/5.0'}
-
 # ===============================================
 # FUNÇÕES DE UTILIDADE E SCRAPING
 # ===============================================
@@ -36,7 +45,7 @@ def _get_names_from_guild_url(url):
     """Busca nomes na tabela principal de membros da guilda."""
     try:
         # Tenta a requisição
-        resp = requests.get(url, headers=HEADERS, timeout=15)
+        resp = session.get(url, timeout=15)
         resp.raise_for_status()
 
         # O restante da lógica de scraping da guild...
@@ -76,7 +85,7 @@ def _scrape_highscores_page(skill, page, vocation_id=None):
         sleep(1.5) # Pausa ESSENCIAL
         
         # Faz a requisição com encoding definido
-        resp = requests.get(url, headers=HEADERS, timeout=15)
+        resp = session.get(url, timeout=15)
         resp.raise_for_status()
         
         # Tenta decodificar como UTF-8
@@ -107,7 +116,7 @@ def _filter_and_save(skill_key, guild_names, all_highscores, value_name):
             nomes_em_comum.append(entry)
 
     def sort_key(entry):
-        cleaned_value = entry['order_value'].replace(',', '').replace('.', '').replace(' ', '')
+        cleaned_value = str(entry['order_value']).replace(',', '').replace('.', '').replace(' ', '')
         try:
             return int(cleaned_value)
         except ValueError:
