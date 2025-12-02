@@ -5,25 +5,22 @@ import json
 from time import sleep
 import sys
 import os
+import re
 
 # ===============================================
 # CONFIGURAÇÃO DO SCRAPENINJA (ANTI-403)
 # ===============================================
-
 SCRAPENINJA_KEY = "eabee2fee1mshbaf906b9a758863p137b91jsnb6363b736c6e"
 
 def safe_get(url):
     """Usa ScrapeNinja para contornar 403 no GitHub Actions."""
     api_url = "https://scrapeninja.p.rapidapi.com/scrape"
-
     headers = {
         "Content-Type": "application/json",
         "x-rapidapi-host": "scrapeninja.p.rapidapi.com",
         "x-rapidapi-key": SCRAPENINJA_KEY
     }
-
     payload = {"url": url}
-
     try:
         resp = requests.post(api_url, headers=headers, json=payload, timeout=20)
         resp.raise_for_status()
@@ -33,11 +30,9 @@ def safe_get(url):
         print(f"ERRO ScrapeNinja: {e}")
         return None
 
-
 # ===============================================
 # CONFIGURAÇÕES GLOBAIS
 # ===============================================
-
 MAX_PAGES = 10
 GUILD_URL = "https://miracle74.com/?subtopic=guilds&action=show&guild=600"
 
@@ -54,11 +49,9 @@ SKILLS = {
     'mage_defense': 'Mage Defense Skills',
 }
 
-
 # ===============================================
 # FUNÇÕES DE SCRAPING
 # ===============================================
-
 def _get_names_from_guild_url(url):
     """Busca nomes dos membros da guild."""
     try:
@@ -86,7 +79,6 @@ def _get_names_from_guild_url(url):
         print(f"ERRO ao buscar guild: {e}")
         return []
 
-
 def _scrape_highscores_page(skill, page, vocation_id=None):
     """Retorna a tabela de highscores."""
     vocation_param = f"&vocation={vocation_id}" if vocation_id else ""
@@ -100,7 +92,6 @@ def _scrape_highscores_page(skill, page, vocation_id=None):
 
         soup = BeautifulSoup(html, "html.parser")
         tables = soup.find_all("table", class_="TableContent")
-
         if len(tables) < 2:
             return None
 
@@ -109,24 +100,37 @@ def _scrape_highscores_page(skill, page, vocation_id=None):
     except Exception:
         return None
 
-
 # ===============================================
-# FILTRO + SALVAMENTO
+# FILTRO + SALVAMENTO (ordenação correta)
 # ===============================================
-
 def _filter_and_save(skill_key, guild_names, all_highscores, value_name):
+    """
+    Ordena por:
+      1) skill numeric (desc)
+      2) nome (asc, case-insensitive) quando empatar
+    """
     guild_lower = {x.lower() for x in guild_names}
-    nomes = [x for x in all_highscores if x["nome"].lower() in guild_lower]
+    # Filtra apenas membros da guild
+    filtered = [x for x in all_highscores if x["nome"].lower() in guild_lower]
 
-    def sort_key(entry):
-        v = str(entry['order_value']).replace(",", "").replace(".", "").replace(" ", "")
-        try:
-            return int(v)
-        except:
-            return 0
+    processed = []
+    for entry in filtered:
+        # extrai número: remove tudo que não é dígito
+        raw = re.sub(r"[^\d]", "", str(entry.get("order_value", "")))
+        num = int(raw) if raw.isdigit() else 0
+        name_lower = entry["nome"].strip().lower()
+        processed.append({
+            "nome": entry["nome"].strip(),
+            "display_value": entry.get("display_value", ""),
+            "order_value_num": num,
+            "order_value_raw": entry.get("order_value", ""),
+            "name_lower": name_lower
+        })
 
-    nomes.sort(key=sort_key, reverse=True)
+    # Ordena: primary = -order_value_num (desc), secondary = name_lower (asc)
+    processed.sort(key=lambda e: (-e["order_value_num"], e["name_lower"]))
 
+    # Monta JSON
     json_data = {
         "timestamp": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
         "skill_name": SKILLS[skill_key],
@@ -134,7 +138,7 @@ def _filter_and_save(skill_key, guild_names, all_highscores, value_name):
         "ranking": []
     }
 
-    for i, entry in enumerate(nomes, start=1):
+    for i, entry in enumerate(processed, start=1):
         json_data["ranking"].append({
             "rank_guild": i,
             "nome": entry["nome"],
@@ -142,16 +146,16 @@ def _filter_and_save(skill_key, guild_names, all_highscores, value_name):
         })
 
     file_name = f"ranking_{skill_key}.json"
-    with open(file_name, "w", encoding="utf-8") as f:
-        json.dump(json_data, f, ensure_ascii=False, indent=4)
-
-    print(f"JSON gerado: {file_name}")
-
+    try:
+        with open(file_name, "w", encoding="utf-8") as f:
+            json.dump(json_data, f, ensure_ascii=False, indent=4)
+        print(f"JSON gerado: {file_name}")
+    except Exception as e:
+        print(f"ERRO ao salvar JSON: {e}")
 
 # ===============================================
 # RANKING NORMAL
 # ===============================================
-
 def rankear_guild_por_skill(skill_key, guild_names):
     all_data = []
     NAME_INDEX = 2
@@ -180,19 +184,20 @@ def rankear_guild_por_skill(skill_key, guild_names):
                 continue
 
             nome = name_tag.text.strip()
+            display_val = tds[VALUE_INDEX].text.strip()
+            order_val = tds[ORDER_INDEX].text.strip()
+
             all_data.append({
                 "nome": nome,
-                "display_value": tds[VALUE_INDEX].text.strip(),
-                "order_value": tds[ORDER_INDEX].text.strip()
+                "display_value": display_val,
+                "order_value": order_val
             })
 
     _filter_and_save(skill_key, guild_names, all_data, VALUE_NAME)
 
-
 # ===============================================
 # RANKING DE MAGE COMBAT + DEFENSE
 # ===============================================
-
 def rankear_mage_skills(guild_names, skill_key):
     mage_data = {}
     weapons = ["sword", "club", "axe"]
@@ -204,7 +209,6 @@ def rankear_mage_skills(guild_names, skill_key):
     for weapon in weapons:
         for voc in vocations:
             for page in range(1, MAX_PAGES + 1):
-
                 table = _scrape_highscores_page(weapon, page, voc)
                 if table is None:
                     continue
@@ -219,13 +223,12 @@ def rankear_mage_skills(guild_names, skill_key):
                         continue
 
                     nome = name_tag.text.strip()
-                    val_str = tds[SKILL_IDX].text.strip().replace(",", "").replace(".", "")
-
-                    try:
-                        val = int(val_str)
-                    except:
+                    val_str = re.sub(r"[^\d]", "", tds[SKILL_IDX].text or "")
+                    if not val_str.isdigit():
                         continue
+                    val = int(val_str)
 
+                    # guarda o melhor valor e, em order_value, mantém num para ordenar depois
                     if nome not in mage_data or val > mage_data[nome]["order_value"]:
                         mage_data[nome] = {
                             "nome": nome,
@@ -234,7 +237,6 @@ def rankear_mage_skills(guild_names, skill_key):
                         }
 
     _filter_and_save(skill_key, guild_names, list(mage_data.values()), "Skill")
-
 
 def rankear_mage_defense(guild_names, skill_key):
     all_data = []
@@ -258,12 +260,10 @@ def rankear_mage_defense(guild_names, skill_key):
                     continue
 
                 nome = name_tag.text.strip()
-                val_str = tds[SKILL_IDX].text.strip().replace(",", "").replace(".", "")
-
-                try:
-                    val = int(val_str)
-                except:
+                val_str = re.sub(r"[^\d]", "", tds[SKILL_IDX].text or "")
+                if not val_str.isdigit():
                     continue
+                val = int(val_str)
 
                 all_data.append({
                     "nome": nome,
@@ -273,11 +273,9 @@ def rankear_mage_defense(guild_names, skill_key):
 
     _filter_and_save(skill_key, guild_names, all_data, "Skill")
 
-
 # ===============================================
 # MAIN
 # ===============================================
-
 def main():
     print("Iniciando geração de rankings.")
     print(f"Buscando guild: {GUILD_URL}")
@@ -302,7 +300,6 @@ def main():
             rankear_guild_por_skill(skill_key, guild_names)
 
     print("Finalizado todos os rankings.")
-
 
 if __name__ == "__main__":
     main()
