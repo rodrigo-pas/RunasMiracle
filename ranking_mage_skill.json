@@ -1,22 +1,22 @@
 {
-    "timestamp": "2025-12-02 09:36:57",
+    "timestamp": "2025-12-02 13:42:35",
     "skill_name": "Mage Combat Skills",
     "value_type": "Skill",
     "ranking": [
         {
             "rank_guild": 1,
-            "nome": "Dalle",
-            "valor": "20 (Sword)"
+            "nome": "Tupi-guarani",
+            "valor": "23 (Sword)"
         },
         {
             "rank_guild": 2,
-            "nome": "Citoplasma",
-            "valor": "19 (Sword)"
+            "nome": "Bruxinho",
+            "valor": "21 (Club)"
         },
         {
             "rank_guild": 3,
-            "nome": "Tupi-guarani",
-            "valor": "23 (Sword)"
+            "nome": "Dalle",
+            "valor": "20 (Sword)"
         },
         {
             "rank_guild": 4,
@@ -25,23 +25,23 @@
         },
         {
             "rank_guild": 5,
-            "nome": "Bruxinho",
-            "valor": "21 (Club)"
-        },
-        {
-            "rank_guild": 6,
             "nome": "Ze Pafuncho",
             "valor": "20 (Club)"
         },
         {
+            "rank_guild": 6,
+            "nome": "Chiconelas",
+            "valor": "20 (Axe)"
+        },
+        {
             "rank_guild": 7,
-            "nome": "Azeitona",
-            "valor": "19 (Club)"
+            "nome": "Citoplasma",
+            "valor": "19 (Sword)"
         },
         {
             "rank_guild": 8,
-            "nome": "Mr Green",
-            "valor": "18 (Club)"
+            "nome": "Azeitona",
+            "valor": "19 (Club)"
         },
         {
             "rank_guild": 9,
@@ -55,8 +55,8 @@
         },
         {
             "rank_guild": 11,
-            "nome": "Chiconelas",
-            "valor": "20 (Axe)"
+            "nome": "Mr Green",
+            "valor": "18 (Club)"
         }
     ]
 }
