@@ -1,5 +1,5 @@
 {
-    "timestamp": "2025-12-01 08:35:02",
+    "timestamp": "2025-12-02 08:29:40",
     "skill_name": "Level / Exp",
     "value_type": "Level",
     "ranking": [
@@ -26,7 +26,7 @@
         {
             "rank_guild": 5,
             "nome": "Indiana Jones",
-            "valor": "94"
+            "valor": "95"
         },
         {
             "rank_guild": 6,
@@ -46,16 +46,16 @@
         {
             "rank_guild": 9,
             "nome": "Charlie Nelson",
-            "valor": "73"
+            "valor": "74"
         },
         {
             "rank_guild": 10,
-            "nome": "Muxixe",
+            "nome": "Seu Basilio",
             "valor": "70"
         },
         {
             "rank_guild": 11,
-            "nome": "Seu Basilio",
+            "nome": "Muxixe",
             "valor": "70"
         },
         {

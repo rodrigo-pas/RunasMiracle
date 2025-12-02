@@ -1,0 +1,47 @@
+{
+    "timestamp": "2025-12-02 08:35:29",
+    "skill_name": "Mage Defense Skills",
+    "value_type": "Skill",
+    "ranking": [
+        {
+            "rank_guild": 1,
+            "nome": "Bruxinho",
+            "valor": "26"
+        },
+        {
+            "rank_guild": 2,
+            "nome": "Tupi-guarani",
+            "valor": "26"
+        },
+        {
+            "rank_guild": 3,
+            "nome": "Dalle",
+            "valor": "25"
+        },
+        {
+            "rank_guild": 4,
+            "nome": "Thomas Turbando",
+            "valor": "23"
+        },
+        {
+            "rank_guild": 5,
+            "nome": "Azeitona",
+            "valor": "22"
+        },
+        {
+            "rank_guild": 6,
+            "nome": "Chiconelas",
+            "valor": "22"
+        },
+        {
+            "rank_guild": 7,
+            "nome": "Citoplasma",
+            "valor": "21"
+        },
+        {
+            "rank_guild": 8,
+            "nome": "Mr Green",
+            "valor": "21"
+        }
+    ]
+}

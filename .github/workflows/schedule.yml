@@ -1,0 +1,44 @@
+name: Daily Ranking Update
+
+# 1. Quando rodar
+on:
+  # Roda todos os dias às 08:00 UTC (horário recomendado)
+  schedule:
+    - cron: '0 8 * * *'
+  # Permite rodar manualmente pela aba Actions do GitHub
+  workflow_dispatch:
+
+jobs:
+  update-ranking:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Passo 1: Configurar o repositório
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      # Passo 2: Configurar o ambiente Python
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+
+      # Passo 3: Instalar dependências
+      - name: Install dependencies
+        run: |
+          # requests e beautifulsoup4 são as dependências de scraping
+          python -m pip install requests beautifulsoup4
+
+      # Passo 4: Rodar o script Python para gerar os JSONs
+      - name: Run Python script
+        # Substitua 'generate_rankings.py' se você o nomeou de outra forma
+        run: python generate_rankings.py
+        
+      # Passo 5: Commit dos arquivos gerados (RANKING JSONs)
+      - name: Commit and Push changes
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "🤖 Feat(auto): Atualização diária dos rankings JSON"
+          # Arquivos que serão versionados e commitados:
+          file_pattern: 'ranking_*.json'
+          # Permite que o GitHub Pages/CDNs usem o novo commit

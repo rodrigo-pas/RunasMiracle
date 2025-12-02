@@ -1,6 +1,7 @@
 // SKILLS utilizadas no python (dicionário)
 const SKILLS_MAP = {
-    'experience': 'Level',
+    // CORREÇÃO AQUI: Valor da Experience precisa ser igual ao que o Python gera
+    'experience': 'Level / Exp', 
     'sword': 'Sword',
     'axe': 'Axe',
     'club': 'Club',
@@ -8,7 +9,8 @@ const SKILLS_MAP = {
     'maglevel': 'Magic Level',
     'shielding': 'Shielding',
     'fishing': 'Fishing',
-    'mage_skill': 'Mage Skills' 
+    'mage_skill': 'Mage Combat Skills',
+    'mage_defense': 'Mage Defense Skills' // <-- NOVO: Adiciona a skill de Shielding para Mages
 };
 
 // 1. Cria os botões de skill no HTML
@@ -17,7 +19,9 @@ function createSkillButtons() {
     if (!selectorDiv) return;
     
     selectorDiv.innerHTML = ''; // Limpa antes de popular
-    let firstButtonKey = null;
+    
+    // Usamos esta variável para garantir que o primeiro botão da lista seja clicado
+    let firstButtonKey = null; 
 
     for (const key in SKILLS_MAP) {
         if (!firstButtonKey) {
@@ -26,9 +30,9 @@ function createSkillButtons() {
         const button = document.createElement('button');
         button.textContent = SKILLS_MAP[key];
         button.className = 'skill-button';
-        button.setAttribute('data-skill-key', key); // Usado para referenciar o botão no loadRanking
+        button.setAttribute('data-skill-key', key); 
         
-        // CORREÇÃO: Passa a referência do botão e usa event.currentTarget para o clique
+        // Passa a referência do botão e usa event.currentTarget para o clique
         button.onclick = (event) => loadRanking(key, event.currentTarget); 
         
         selectorDiv.appendChild(button);

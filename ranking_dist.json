@@ -1,5 +1,5 @@
 {
-    "timestamp": "2025-12-01 08:35:57",
+    "timestamp": "2025-12-02 08:31:16",
     "skill_name": "Distance",
     "value_type": "Skill",
     "ranking": [
@@ -30,12 +30,12 @@
         },
         {
             "rank_guild": 6,
-            "nome": "Sabhugo",
+            "nome": "Treep",
             "valor": "81"
         },
         {
             "rank_guild": 7,
-            "nome": "Treep",
+            "nome": "Sabhugo",
             "valor": "81"
         },
         {
