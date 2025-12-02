@@ -12,8 +12,8 @@ import re
 # ===============================================
 SCRAPENINJA_KEY = "eabee2fee1mshbaf906b9a758863p137b91jsnb6363b736c6e"
 
-def safe_get(url):
-    """Usa ScrapeNinja para contornar 403 no GitHub Actions."""
+def safe_get(url, retries=3):
+    """Usa ScrapeNinja com tentativas extras para evitar erros 500/timeout."""
     api_url = "https://scrapeninja.p.rapidapi.com/scrape"
     headers = {
         "Content-Type": "application/json",
@@ -21,14 +21,20 @@ def safe_get(url):
         "x-rapidapi-key": SCRAPENINJA_KEY
     }
     payload = {"url": url}
-    try:
-        resp = requests.post(api_url, headers=headers, json=payload, timeout=20)
-        resp.raise_for_status()
-        data = resp.json()
-        return data.get("body", "")
-    except Exception as e:
-        print(f"ERRO ScrapeNinja: {e}")
-        return None
+
+    for attempt in range(1, retries + 1):
+        try:
+            resp = requests.post(api_url, headers=headers, json=payload, timeout=60)
+            resp.raise_for_status()
+            data = resp.json()
+            return data.get("body", "")
+        except Exception as e:
+            print(f"Tentativa {attempt}/{retries} falhou: {e}")
+            sleep(2 * attempt)
+
+    print("Falhou todas as tentativas ScrapeNinja.")
+    return None
+
 
 # ===============================================
 # CONFIGURAÇÕES GLOBAIS
