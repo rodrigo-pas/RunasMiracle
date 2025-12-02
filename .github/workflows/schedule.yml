@@ -11,6 +11,10 @@ on:
 jobs:
   update-ranking:
     runs-on: ubuntu-latest
+    # --- CORREÇÃO CRUCIAL AQUI ---
+    permissions:
+      contents: write # Permite que o workflow escreva de volta no repositório
+    # -----------------------------
 
     steps:
       # Passo 1: Configurar o repositório
@@ -31,7 +35,6 @@ jobs:
 
       # Passo 4: Rodar o script Python para gerar os JSONs
       - name: Run Python script
-        # Substitua 'generate_rankings.py' se você o nomeou de outra forma
         run: python generate_rankings.py
         
       # Passo 5: Commit dos arquivos gerados (RANKING JSONs)
