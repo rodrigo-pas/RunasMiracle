@@ -1,5 +1,5 @@
 {
-    "timestamp": "2025-12-02 11:57:46",
+    "timestamp": "2025-12-02 14:03:50",
     "skill_name": "Shielding",
     "value_type": "Skill",
     "ranking": [
@@ -30,12 +30,12 @@
         },
         {
             "rank_guild": 6,
-            "nome": "Muxixe",
+            "nome": "Panisset",
             "valor": "79"
         },
         {
             "rank_guild": 7,
-            "nome": "Panisset",
+            "nome": "Muxixe",
             "valor": "79"
         },
         {
@@ -50,17 +50,17 @@
         },
         {
             "rank_guild": 10,
-            "nome": "Guineks Pcd",
+            "nome": "Miu Miu",
             "valor": "76"
         },
         {
             "rank_guild": 11,
-            "nome": "Sr Milagre",
+            "nome": "Guineks Pcd",
             "valor": "76"
         },
         {
             "rank_guild": 12,
-            "nome": "Miu Miu",
+            "nome": "Sr Milagre",
             "valor": "76"
         },
         {
@@ -80,12 +80,12 @@
         },
         {
             "rank_guild": 16,
-            "nome": "Paul Atreidess",
+            "nome": "Lievore",
             "valor": "71"
         },
         {
             "rank_guild": 17,
-            "nome": "Lievore",
+            "nome": "Paul Atreidess",
             "valor": "71"
         },
         {

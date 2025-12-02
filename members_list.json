@@ -1,186 +1,231 @@
 {
-    "timestamp": "2025-12-02 11:54:17",
+    "timestamp": "2025-12-02 14:00:17",
     "total_members": 45,
     "members": [
         {
             "name": "Rents Perecido",
-            "rank": "Offline"
+            "rank": "Leader",
+            "status": "Offline"
         },
         {
             "name": "Bruxinho",
-            "rank": "Online"
+            "rank": "Vice-Leader",
+            "status": "Online"
         },
         {
             "name": "Asia Jack",
-            "rank": "Offline"
+            "rank": "SLOW BRO",
+            "status": "Offline"
         },
         {
             "name": "Azeitona",
-            "rank": "Online"
+            "rank": "SLOW BRO",
+            "status": "Online"
         },
         {
             "name": "Brisolina",
-            "rank": "Offline"
+            "rank": "SLOW BRO",
+            "status": "Offline"
         },
         {
             "name": "Cabulozeiro",
-            "rank": "Offline"
+            "rank": "SLOW BRO",
+            "status": "Offline"
         },
         {
             "name": "Charlie Nelson",
-            "rank": "Online"
+            "rank": "SLOW BRO",
+            "status": "Offline"
         },
         {
             "name": "Chiconelas",
-            "rank": "Offline"
+            "rank": "SLOW BRO",
+            "status": "Offline"
         },
         {
             "name": "Coronel Tiburcio",
-            "rank": "Online"
+            "rank": "SLOW BRO",
+            "status": "Online"
         },
         {
             "name": "Cyrax Ciborg",
-            "rank": "Online"
+            "rank": "SLOW BRO",
+            "status": "Online"
         },
         {
             "name": "Drady Legend",
-            "rank": "Offline"
+            "rank": "SLOW BRO",
+            "status": "Offline"
         },
         {
             "name": "Eden",
-            "rank": "Online"
+            "rank": "SLOW BRO",
+            "status": "Online"
         },
         {
             "name": "Holth",
-            "rank": "Offline"
+            "rank": "SLOW BRO",
+            "status": "Offline"
         },
         {
             "name": "Indiana Jones",
-            "rank": "Offline"
+            "rank": "SLOW BRO",
+            "status": "Offline"
         },
         {
             "name": "Kunkmaster",
-            "rank": "Offline"
+            "rank": "SLOW BRO",
+            "status": "Online"
         },
         {
             "name": "Lievore",
-            "rank": "Online"
+            "rank": "SLOW BRO",
+            "status": "Online"
         },
         {
             "name": "Lipezin",
-            "rank": "Offline"
+            "rank": "SLOW BRO",
+            "status": "Offline"
         },
         {
             "name": "Luis Espalha Lixo",
-            "rank": "Offline"
+            "rank": "SLOW BRO",
+            "status": "Offline"
         },
         {
             "name": "Marola Games",
-            "rank": "Offline"
+            "rank": "SLOW BRO",
+            "status": "Offline"
         },
         {
             "name": "Miu Miu",
-            "rank": "Offline"
+            "rank": "SLOW BRO",
+            "status": "Online"
         },
         {
             "name": "Monge Exaltado",
-            "rank": "Offline"
+            "rank": "SLOW BRO",
+            "status": "Offline"
         },
         {
             "name": "Mr Green",
-            "rank": "Offline"
+            "rank": "SLOW BRO",
+            "status": "Offline"
         },
         {
             "name": "Muxixe",
-            "rank": "Offline"
+            "rank": "SLOW BRO",
+            "status": "Offline"
         },
         {
             "name": "Panda Club",
-            "rank": "Offline"
+            "rank": "SLOW BRO",
+            "status": "Offline"
         },
         {
             "name": "Panisset",
-            "rank": "Offline"
+            "rank": "SLOW BRO",
+            "status": "Offline"
         },
         {
             "name": "Paul Atreidess",
-            "rank": "Online"
+            "rank": "SLOW BRO",
+            "status": "Online"
         },
         {
             "name": "Rejeitada",
-            "rank": "Offline"
+            "rank": "SLOW BRO",
+            "status": "Offline"
         },
         {
             "name": "Sabhugo",
-            "rank": "Offline"
+            "rank": "SLOW BRO",
+            "status": "Online"
         },
         {
             "name": "Salve-se-Quem-Puder",
-            "rank": "Offline"
+            "rank": "SLOW BRO",
+            "status": "Offline"
         },
         {
             "name": "Seu Basilio",
-            "rank": "Offline"
+            "rank": "SLOW BRO",
+            "status": "Online"
         },
         {
             "name": "Sir Ignorance",
-            "rank": "Offline"
+            "rank": "SLOW BRO",
+            "status": "Offline"
         },
         {
             "name": "Sir Kustela",
-            "rank": "Online"
+            "rank": "SLOW BRO",
+            "status": "Online"
         },
         {
             "name": "Sr Milagre",
-            "rank": "Offline"
+            "rank": "SLOW BRO",
+            "status": "Offline"
         },
         {
             "name": "The Black Knight",
-            "rank": "Offline"
+            "rank": "SLOW BRO",
+            "status": "Offline"
         },
         {
             "name": "Thomas Turbando",
-            "rank": "Offline"
+            "rank": "SLOW BRO",
+            "status": "Offline"
         },
         {
             "name": "Umbabarauma Homemgol",
-            "rank": "Online"
+            "rank": "SLOW BRO",
+            "status": "Online"
         },
         {
             "name": "Vitoria Healer",
-            "rank": "Offline"
+            "rank": "SLOW BRO",
+            "status": "Offline"
         },
         {
             "name": "Ze Pafuncho",
-            "rank": "Offline"
+            "rank": "SLOW BRO",
+            "status": "Offline"
         },
         {
             "name": "Chinela",
-            "rank": "Offline"
+            "rank": "ROOKER",
+            "status": "Offline"
         },
         {
             "name": "Citoplasma",
-            "rank": "Offline"
+            "rank": "Lendario",
+            "status": "Online"
         },
         {
             "name": "Dalle",
-            "rank": "Offline"
+            "rank": "Lendario",
+            "status": "Online"
         },
         {
             "name": "Guineks Pcd",
-            "rank": "Offline"
+            "rank": "Lendario",
+            "status": "Online"
         },
         {
             "name": "Potasu",
-            "rank": "Offline"
+            "rank": "Lendario",
+            "status": "Offline"
         },
         {
             "name": "Treep",
-            "rank": "Offline"
+            "rank": "Lendario",
+            "status": "Offline"
         },
         {
             "name": "Tupi-guarani",
-            "rank": "Offline"
+            "rank": "Lendario",
+            "status": "Offline"
         }
     ]
 }
