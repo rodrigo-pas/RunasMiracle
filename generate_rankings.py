@@ -4,7 +4,7 @@ from datetime import datetime
 import json
 from time import sleep 
 import sys 
-import re
+import re 
 
 # ===============================================
 # CONFIGURAÇÕES GLOBAIS
@@ -12,7 +12,6 @@ import re
 
 MAX_PAGES = 10 
 GUILD_URL = "https://miracle74.com/?subtopic=guilds&action=show&guild=600" 
-OUTPUT_FILE = "rankings.json"
 
 SKILLS = {
     'experience': 'Level / Exp',
@@ -27,16 +26,15 @@ SKILLS = {
     'mage_defense': 'Mage Defense Skills', 
 }
 
-HEADERS = {'User-Agent': 'Mozilla/5.0'} 
+HEADERS = {'User-Agent': 'Mozilla/5.0'}
 
 # ===============================================
 # FUNÇÕES DE UTILIDADE E SCRAPING
 # ===============================================
 
 def _get_names_from_guild_url(url):
-    """Busca Nome, Rank (Cargo/Posição) e Status dos membros da guild."""
+    """Busca nomes na tabela principal de membros da guilda."""
     try:
-        # Requisicao direta, sem ScraperAPI
         resp = requests.get(url, headers=HEADERS, timeout=15)
         resp.raise_for_status()
 
@@ -49,12 +47,10 @@ def _get_names_from_guild_url(url):
             rows = guild_table.find_all("tr", recursive=False)[1:]
             for row in rows:
                 tds = row.find_all("td")
-                
-                # A tabela da guild tem as colunas: 0=Rank/Posição, 1=Nome, 4=Status
-                if len(tds) >= 5: 
-                    name_cell = tds[1]
+                if len(tds) > 1:
+                    name_cell = tds[1] 
                     rank_cell = tds[0] 
-                    status_cell = tds[4]
+                    status_cell = tds[4] 
                     
                     link = name_cell.find("a", href=lambda href: href and "subtopic=characters" in href)
                     
@@ -102,9 +98,8 @@ def _scrape_highscores_page(skill, page, vocation_id=None):
     url = f"https://miracle74.com/?subtopic=highscores&list={skill}&page={page}{vocation_param}"
     
     try:
-        sleep(1.5) 
+        sleep(1.5) # Pausa ESSENCIAL
         
-        # Requisicao direta sem proxy
         resp = requests.get(url, headers=HEADERS, timeout=15)
         resp.raise_for_status()
         soup = BeautifulSoup(resp.content, 'html.parser')
@@ -122,10 +117,10 @@ def _scrape_highscores_page(skill, page, vocation_id=None):
         print(f"ERRO DE PARSING (Pág {page}): {e}")
         return None
 
-def _filter_and_save(skill_key, guild_names_for_filter, all_highscores, value_name):
+def _filter_and_save(skill_key, guild_names, all_highscores, value_name):
     """Função auxiliar para filtrar, ordenar e salvar o resultado final em JSON."""
     
-    guild_names_lower = {name.lower() for name in guild_names_for_filter} 
+    guild_names_lower = {name.lower() for name in guild_names} 
     nomes_em_comum = []
     
     for entry in all_highscores:
@@ -133,14 +128,19 @@ def _filter_and_save(skill_key, guild_names_for_filter, all_highscores, value_na
             nomes_em_comum.append(entry)
 
     def sort_key(entry):
+        # Garante que o valor de ordenação seja numérico
         cleaned_value = entry['order_value'].replace(',', '').replace('.', '').replace(' ', '')
         try:
-            return int(cleaned_value)
+            num_value = int(cleaned_value)
         except ValueError:
-            return 0 
+            num_value = 0 
+        
+        # CHAVE DE ORDENAÇÃO CORRIGIDA: (-Valor Numérico, Nome Alfabético)
+        # O '-' garante a ordem decrescente do valor.
+        return (-num_value, entry['nome'].lower())
         
     try:
-        nomes_em_comum.sort(key=sort_key, reverse=True) 
+        nomes_em_comum.sort(key=sort_key) 
     except Exception:
         pass 
     
@@ -169,12 +169,16 @@ def _filter_and_save(skill_key, guild_names_for_filter, all_highscores, value_na
     except Exception as e:
         print(f"ERRO FATAL ao salvar JSON: {e}")
 
+# ===============================================
+# LÓGICA DE RANKING - BASE E AGREGADA
+# ===============================================
 
-def rankear_guild_por_skill(skill_key, guild_names_for_filter):
+def rankear_guild_por_skill(skill_key, guild_names):
     """Busca e filtra o ranking para skills individuais (e.g., sword, exp)."""
     
     all_highscores = []
     
+    # --- DEFINIÇÃO DOS ÍNDICES DE EXTRAÇÃO ---
     NAME_INDEX = 2
     
     if skill_key == 'experience':
@@ -186,6 +190,7 @@ def rankear_guild_por_skill(skill_key, guild_names_for_filter):
         ORDER_INDEX = 5
         VALUE_NAME = "Skill"
     
+    # --- 1. COLETA DOS DADOS (Páginas 1 a 10) ---
     for page in range(1, MAX_PAGES + 1):
         
         table = _scrape_highscores_page(skill_key, page)
@@ -209,13 +214,12 @@ def rankear_guild_por_skill(skill_key, guild_names_for_filter):
                         "order_value": value_to_order
                     })
 
-    _filter_and_save(skill_key, guild_names_for_filter, all_highscores, VALUE_NAME)
+    _filter_and_save(skill_key, guild_names, all_highscores, VALUE_NAME)
 
 
-def rankear_mage_skills(guild_names_for_filter):
+def rankear_mage_skills(guild_names, skill_key):
     """Busca 60 páginas (3 weapons x 2 vocations x 10 pages) e agrega o melhor skill. (COMBATE)"""
     
-    skill_key = 'mage_skill' # Chave do dicionário SKILLS
     mage_data = {} 
     weapons = ['sword', 'club', 'axe']
     vocations = {1: 'Sorcerer', 2: 'Druid'} 
@@ -267,14 +271,13 @@ def rankear_mage_skills(guild_names_for_filter):
             "order_value": data['order_value'] 
         })
     
-    _filter_and_save(skill_key, guild_names_for_filter, all_highscores, "Skill")
+    _filter_and_save(skill_key, guild_names, all_highscores, "Skill")
 
 
-def rankear_mage_defense(guild_names_for_filter):
+def rankear_mage_defense(guild_names, skill_key):
     """Busca o ranking de Shielding para mages (Sorcerer e Druid) e filtra."""
     
     skill = 'shielding'
-    skill_key = 'mage_defense' # Chave do dicionário SKILLS
     all_highscores = []
     vocations = {1: 'Sorcerer', 2: 'Druid'} 
     
@@ -308,7 +311,7 @@ def rankear_mage_defense(guild_names_for_filter):
                     "order_value": skill_value
                 })
 
-    _filter_and_save(skill_key, guild_names_for_filter, all_highscores, "Skill")
+    _filter_and_save(skill_key, guild_names, all_highscores, "Skill")
 
 
 # ===============================================
@@ -319,16 +322,16 @@ def main():
     """Função principal que gerencia o fluxo de trabalho."""
     
     print("Iniciando geração de rankings. (Headless Mode)")
-    
-    # 1. Carrega a lista de membros e salva o JSON (members_list.json)
     print(f"Buscando nomes da guild em: {GUILD_URL}")
     guild_structured_list = _get_names_from_guild_url(GUILD_URL)
     
     if not guild_structured_list:
         print("ERRO: nenhum membro encontrado na guild. Encerrando.")
-        sys.exit(1) 
+        sys.exit(1) # Sai com erro
         
-    _save_member_list(guild_structured_list) # Salva o JSON da Home
+    
+    # 1. SALVA A LISTA ESTRUTURADA DE MEMBROS (Para a nova Home)
+    _save_member_list(guild_structured_list)
     
     # 2. CRIA A LISTA SIMPLES DE NOMES (Para o filtro dos rankings)
     guild_names_for_filter = [member['name'] for member in guild_structured_list]
@@ -341,10 +344,10 @@ def main():
         
         if skill_key == 'mage_skill':
             print(f"Iniciando MAGE COMBATE (Agregação)...")
-            rankear_mage_skills(guild_names_for_filter)
+            rankear_mage_skills(guild_names_for_filter, skill_key)
         elif skill_key == 'mage_defense':
             print(f"Iniciando MAGE DEFENSE (Shielding Agregação)...")
-            rankear_mage_defense(guild_names_for_filter)
+            rankear_mage_defense(guild_names_for_filter, skill_key)
         else:
             print(f"Iniciando {SKILLS[skill_key]} (Individual)...")
             rankear_guild_por_skill(skill_key, guild_names_for_filter)
@@ -354,5 +357,5 @@ def main():
 
 
 if __name__ == "__main__":
+    # Teste de execução local.
     main()
-    
