@@ -1,5 +1,5 @@
 {
-    "timestamp": "2025-12-02 08:34:36",
+    "timestamp": "2025-12-02 09:25:54",
     "skill_name": "Mage Combat Skills",
     "value_type": "Skill",
     "ranking": [
@@ -15,42 +15,42 @@
         },
         {
             "rank_guild": 3,
-            "nome": "Dalle",
-            "valor": "20 (Sword)"
-        },
-        {
-            "rank_guild": 4,
-            "nome": "Thomas Turbando",
-            "valor": "20 (Sword)"
-        },
-        {
-            "rank_guild": 5,
-            "nome": "Ze Pafuncho",
-            "valor": "20 (Club)"
-        },
-        {
-            "rank_guild": 6,
             "nome": "Chiconelas",
             "valor": "20 (Axe)"
         },
         {
-            "rank_guild": 7,
-            "nome": "Citoplasma",
-            "valor": "19 (Sword)"
+            "rank_guild": 4,
+            "nome": "Dalle",
+            "valor": "20 (Sword)"
         },
         {
-            "rank_guild": 8,
+            "rank_guild": 5,
+            "nome": "Thomas Turbando",
+            "valor": "20 (Sword)"
+        },
+        {
+            "rank_guild": 6,
+            "nome": "Ze Pafuncho",
+            "valor": "20 (Club)"
+        },
+        {
+            "rank_guild": 7,
             "nome": "Azeitona",
             "valor": "19 (Club)"
         },
         {
+            "rank_guild": 8,
+            "nome": "Citoplasma",
+            "valor": "19 (Sword)"
+        },
+        {
             "rank_guild": 9,
-            "nome": "Vitoria Healer",
+            "nome": "Sir Kustela",
             "valor": "19 (Club)"
         },
         {
             "rank_guild": 10,
-            "nome": "Sir Kustela",
+            "nome": "Vitoria Healer",
             "valor": "19 (Club)"
         },
         {
