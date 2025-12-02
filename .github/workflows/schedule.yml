@@ -15,6 +15,8 @@ jobs:
     steps:
       - name: Checkout do repositório
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Instalar Python
         uses: actions/setup-python@v5
@@ -27,6 +29,11 @@ jobs:
 
       - name: Executar script
         run: python generate_rankings.py
+
+      # Evita erro de "non-fast-forward"
+      - name: Atualizar branch antes do commit
+        run: |
+          git pull --rebase origin main || true
 
       - name: Commitar arquivos JSON
         run: |
