@@ -1,5 +1,5 @@
 {
-    "timestamp": "2025-12-02 15:23:02",
+    "timestamp": "2025-12-04 17:17:58",
     "skill_name": "Axe",
     "value_type": "Skill",
     "ranking": [
@@ -11,7 +11,7 @@
         {
             "rank_guild": 2,
             "nome": "Holth",
-            "valor": "82"
+            "valor": "83"
         },
         {
             "rank_guild": 3,
@@ -21,22 +21,22 @@
         {
             "rank_guild": 4,
             "nome": "Miu Miu",
-            "valor": "78"
+            "valor": "79"
         },
         {
             "rank_guild": 5,
-            "nome": "Marola Games",
-            "valor": "71"
+            "nome": "Paul Atreidess",
+            "valor": "72"
         },
         {
             "rank_guild": 6,
-            "nome": "Paul Atreidess",
+            "nome": "Marola Games",
             "valor": "71"
         },
         {
             "rank_guild": 7,
             "nome": "Eden",
-            "valor": "68"
+            "valor": "70"
         }
     ]
 }

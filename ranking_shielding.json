@@ -1,5 +1,5 @@
 {
-    "timestamp": "2025-12-02 15:24:59",
+    "timestamp": "2025-12-04 17:19:56",
     "skill_name": "Shielding",
     "value_type": "Skill",
     "ranking": [
@@ -21,12 +21,12 @@
         {
             "rank_guild": 4,
             "nome": "Coronel Tiburcio",
-            "valor": "80"
+            "valor": "81"
         },
         {
             "rank_guild": 5,
             "nome": "The Black Knight",
-            "valor": "80"
+            "valor": "81"
         },
         {
             "rank_guild": 6,
@@ -45,18 +45,18 @@
         },
         {
             "rank_guild": 9,
-            "nome": "Holth",
+            "nome": "Guineks Pcd",
             "valor": "77"
         },
         {
             "rank_guild": 10,
-            "nome": "Guineks Pcd",
-            "valor": "76"
+            "nome": "Holth",
+            "valor": "77"
         },
         {
             "rank_guild": 11,
             "nome": "Miu Miu",
-            "valor": "76"
+            "valor": "77"
         },
         {
             "rank_guild": 12,

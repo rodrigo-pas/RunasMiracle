@@ -1,11 +1,11 @@
 {
-    "timestamp": "2025-12-02 15:21:34",
+    "timestamp": "2025-12-04 17:16:31",
     "total_members": 45,
     "members": [
         {
             "name": "Rents Perecido",
             "rank": "Leader",
-            "status": "Online"
+            "status": "Offline"
         },
         {
             "name": "Bruxinho",
@@ -35,12 +35,12 @@
         {
             "name": "Charlie Nelson",
             "rank": "SLOW BRO",
-            "status": "Online"
+            "status": "Offline"
         },
         {
             "name": "Chiconelas",
             "rank": "SLOW BRO",
-            "status": "Offline"
+            "status": "Online"
         },
         {
             "name": "Coronel Tiburcio",
@@ -50,7 +50,7 @@
         {
             "name": "Cyrax Ciborg",
             "rank": "SLOW BRO",
-            "status": "Offline"
+            "status": "Online"
         },
         {
             "name": "Drady Legend",
@@ -65,7 +65,7 @@
         {
             "name": "Holth",
             "rank": "SLOW BRO",
-            "status": "Offline"
+            "status": "Online"
         },
         {
             "name": "Indiana Jones",
@@ -80,7 +80,7 @@
         {
             "name": "Lievore",
             "rank": "SLOW BRO",
-            "status": "Online"
+            "status": "Offline"
         },
         {
             "name": "Lipezin",
@@ -130,7 +130,7 @@
         {
             "name": "Paul Atreidess",
             "rank": "SLOW BRO",
-            "status": "Online"
+            "status": "Offline"
         },
         {
             "name": "Rejeitada",
@@ -140,7 +140,7 @@
         {
             "name": "Sabhugo",
             "rank": "SLOW BRO",
-            "status": "Offline"
+            "status": "Online"
         },
         {
             "name": "Salve-se-Quem-Puder",
@@ -170,7 +170,7 @@
         {
             "name": "The Black Knight",
             "rank": "SLOW BRO",
-            "status": "Online"
+            "status": "Offline"
         },
         {
             "name": "Thomas Turbando",
@@ -190,7 +190,7 @@
         {
             "name": "Ze Pafuncho",
             "rank": "SLOW BRO",
-            "status": "Offline"
+            "status": "Online"
         },
         {
             "name": "Chinela",
@@ -205,7 +205,7 @@
         {
             "name": "Dalle",
             "rank": "Lendario",
-            "status": "Online"
+            "status": "Offline"
         },
         {
             "name": "Guineks Pcd",
@@ -215,7 +215,7 @@
         {
             "name": "Potasu",
             "rank": "Lendario",
-            "status": "Offline"
+            "status": "Online"
         },
         {
             "name": "Treep",
