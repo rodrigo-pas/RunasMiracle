@@ -1,5 +1,5 @@
 {
-    "timestamp": "2025-12-04 17:18:57",
+    "timestamp": "2025-12-06 10:56:10",
     "skill_name": "Distance",
     "value_type": "Skill",
     "ranking": [
@@ -11,7 +11,7 @@
         {
             "rank_guild": 2,
             "nome": "Guineks Pcd",
-            "valor": "93"
+            "valor": "94"
         },
         {
             "rank_guild": 3,
@@ -40,16 +40,21 @@
         },
         {
             "rank_guild": 8,
+            "nome": "Baggins",
+            "valor": "79"
+        },
+        {
+            "rank_guild": 9,
             "nome": "Rents Perecido",
             "valor": "77"
         },
         {
-            "rank_guild": 9,
+            "rank_guild": 10,
             "nome": "Cyrax Ciborg",
             "valor": "76"
         },
         {
-            "rank_guild": 10,
+            "rank_guild": 11,
             "nome": "Asia Jack",
             "valor": "71"
         }

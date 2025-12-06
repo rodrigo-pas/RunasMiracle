@@ -1,5 +1,5 @@
 {
-    "timestamp": "2025-12-04 17:19:26",
+    "timestamp": "2025-12-06 10:56:42",
     "skill_name": "Magic Level",
     "value_type": "Skill",
     "ranking": [
@@ -16,7 +16,7 @@
         {
             "rank_guild": 3,
             "nome": "Bruxinho",
-            "valor": "56"
+            "valor": "57"
         },
         {
             "rank_guild": 4,
@@ -36,7 +36,7 @@
         {
             "rank_guild": 7,
             "nome": "Thomas Turbando",
-            "valor": "54"
+            "valor": "55"
         },
         {
             "rank_guild": 8,

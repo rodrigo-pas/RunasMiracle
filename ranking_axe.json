@@ -1,5 +1,5 @@
 {
-    "timestamp": "2025-12-04 17:17:58",
+    "timestamp": "2025-12-06 10:55:05",
     "skill_name": "Axe",
     "value_type": "Skill",
     "ranking": [
@@ -25,16 +25,21 @@
         },
         {
             "rank_guild": 5,
+            "nome": "Aulf Machado Forte",
+            "valor": "75"
+        },
+        {
+            "rank_guild": 6,
             "nome": "Paul Atreidess",
             "valor": "72"
         },
         {
-            "rank_guild": 6,
+            "rank_guild": 7,
             "nome": "Marola Games",
             "valor": "71"
         },
         {
-            "rank_guild": 7,
+            "rank_guild": 8,
             "nome": "Eden",
             "valor": "70"
         }

@@ -1,5 +1,5 @@
 {
-    "timestamp": "2025-12-04 17:19:56",
+    "timestamp": "2025-12-06 10:57:14",
     "skill_name": "Shielding",
     "value_type": "Skill",
     "ranking": [
@@ -40,56 +40,61 @@
         },
         {
             "rank_guild": 8,
-            "nome": "Drady Legend",
-            "valor": "77"
+            "nome": "Guineks Pcd",
+            "valor": "78"
         },
         {
             "rank_guild": 9,
-            "nome": "Guineks Pcd",
+            "nome": "Aulf Machado Forte",
             "valor": "77"
         },
         {
             "rank_guild": 10,
-            "nome": "Holth",
+            "nome": "Drady Legend",
             "valor": "77"
         },
         {
             "rank_guild": 11,
-            "nome": "Miu Miu",
+            "nome": "Holth",
             "valor": "77"
         },
         {
             "rank_guild": 12,
+            "nome": "Miu Miu",
+            "valor": "77"
+        },
+        {
+            "rank_guild": 13,
             "nome": "Sr Milagre",
             "valor": "76"
         },
         {
-            "rank_guild": 13,
+            "rank_guild": 14,
             "nome": "Charlie Nelson",
             "valor": "75"
         },
         {
-            "rank_guild": 14,
+            "rank_guild": 15,
             "nome": "Luis Espalha Lixo",
             "valor": "75"
         },
         {
-            "rank_guild": 15,
+            "rank_guild": 16,
+            "nome": "Paul Atreidess",
+            "valor": "72"
+        },
+        {
+            "rank_guild": 17,
             "nome": "Rejeitada",
             "valor": "72"
         },
         {
-            "rank_guild": 16,
+            "rank_guild": 18,
             "nome": "Lievore",
             "valor": "71"
         },
         {
-            "rank_guild": 17,
-            "nome": "Paul Atreidess",
-            "valor": "71"
-        },
-        {
-            "rank_guild": 18,
+            "rank_guild": 19,
             "nome": "Sir Ignorance",
             "valor": "70"
         }

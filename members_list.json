@@ -1,6 +1,6 @@
 {
-    "timestamp": "2025-12-04 17:16:31",
-    "total_members": 45,
+    "timestamp": "2025-12-06 10:53:29",
+    "total_members": 47,
     "members": [
         {
             "name": "Rents Perecido",
@@ -18,9 +18,19 @@
             "status": "Offline"
         },
         {
-            "name": "Azeitona",
+            "name": "Aulf Machado Forte",
             "rank": "SLOW BRO",
             "status": "Online"
+        },
+        {
+            "name": "Azeitona",
+            "rank": "SLOW BRO",
+            "status": "Offline"
+        },
+        {
+            "name": "Baggins",
+            "rank": "SLOW BRO",
+            "status": "Offline"
         },
         {
             "name": "Brisolina",
@@ -85,7 +95,7 @@
         {
             "name": "Lipezin",
             "rank": "SLOW BRO",
-            "status": "Online"
+            "status": "Offline"
         },
         {
             "name": "Luis Espalha Lixo",
@@ -140,7 +150,7 @@
         {
             "name": "Sabhugo",
             "rank": "SLOW BRO",
-            "status": "Online"
+            "status": "Offline"
         },
         {
             "name": "Salve-se-Quem-Puder",
@@ -175,12 +185,12 @@
         {
             "name": "Thomas Turbando",
             "rank": "SLOW BRO",
-            "status": "Offline"
+            "status": "Online"
         },
         {
             "name": "Umbabarauma Homemgol",
             "rank": "SLOW BRO",
-            "status": "Online"
+            "status": "Offline"
         },
         {
             "name": "Vitoria Healer",
@@ -190,7 +200,7 @@
         {
             "name": "Ze Pafuncho",
             "rank": "SLOW BRO",
-            "status": "Online"
+            "status": "Offline"
         },
         {
             "name": "Chinela",
@@ -200,7 +210,7 @@
         {
             "name": "Citoplasma",
             "rank": "Lendario",
-            "status": "Online"
+            "status": "Offline"
         },
         {
             "name": "Dalle",
@@ -210,12 +220,12 @@
         {
             "name": "Guineks Pcd",
             "rank": "Lendario",
-            "status": "Online"
+            "status": "Offline"
         },
         {
             "name": "Potasu",
             "rank": "Lendario",
-            "status": "Online"
+            "status": "Offline"
         },
         {
             "name": "Treep",

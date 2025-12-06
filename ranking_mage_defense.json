@@ -1,5 +1,5 @@
 {
-    "timestamp": "2025-12-04 17:23:53",
+    "timestamp": "2025-12-06 11:01:45",
     "skill_name": "Mage Defense Skills",
     "value_type": "Skill",
     "ranking": [
@@ -11,7 +11,7 @@
         {
             "rank_guild": 2,
             "nome": "Tupi-guarani",
-            "valor": "26"
+            "valor": "27"
         },
         {
             "rank_guild": 3,
